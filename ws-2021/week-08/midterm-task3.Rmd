@@ -1,0 +1,120 @@
+---
+title: "Task 3"
+author: ""
+date: ""
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, dataload, error=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+```
+
+```{r, eval = F, include = F}
+data <- tibble(subject = rep(str_c("s", 1:5), each=3), condition = rep(c("x", "y", "z"), times = 5), rating = as.character(round(runif(15)*100, 2)))
+data
+```
+
+
+
+```{r, eval = F, include = F}
+data <- data %>%
+  pivot_wider(
+    names_from = condition,
+    values_from = rating
+  ) 
+data
+write_csv(data, "data-21.csv")
+```
+
+```{r}
+d <- tibble(
+  subject = rep(str_c("s", 1:5)),
+  x = c(36.25, 29.72, 1.37, 48.55, 87.34),
+  y = c(62.97, 87.6, 81.05, 78.42, 86.7),
+  z = c(4.88, 98.58, 95.77, 71.99, 29.44)
+)
+d
+```
+
+```{r}
+d %>% 
+  # select(-z) %>% 
+  pivot_longer(
+    cols = 2:3,
+    names_to = "condition",
+    values_to = "rating"
+  ) %>%
+  group_by(condition) %>% 
+  summarise(rating = mean(rating)) %>%
+  mutate(condition = case_when(
+    condition == "x" ~ "Condition X",
+    condition == "y" ~ "Condition Y"
+  )) %>%
+  ggplot(aes(
+    x = condition,
+    y = rating,
+    fill = condition
+  )) +
+  geom_bar(stat = "identity") +
+  labs(x = "",
+       y = "Average rating") +
+  guides(fill = "none") +
+  coord_flip()
+```
+
+```{r, eval = F}
+d %>% 
+  # select(-z) %>% 
+  pivot_longer(
+    cols = 2:3,
+    names_to = "condition",
+    values_to = "rating"
+  ) %>%
+  ggplot(aes(
+    x = condition,
+    y = rating,
+    fill = condition
+  )) +
+  geom_bar(stat = "identity")
+```
+
+```{r}
+post_pred_samples <- function(
+  k, N,
+  n_samples = 100,
+  prior_alpha = 1, prior_beta = 1
+) {
+  map_dbl(
+    rbeta(n_samples, prior_alpha + k, prior_beta + N - k),
+    function(x){
+      sum(runif(n = N, 0, 1) < x)
+    }
+  )
+}
+```
+
+```{r}
+d %>% 
+  pivot_longer(
+    cols = 2:3,
+    names_to = "condition",
+    values_to = "rating"
+  ) %>%
+  group_by(condition) %>% 
+  summarise(rating = mean(rating)) %>%
+  mutate(condition = case_when(
+    condition == "x" ~ "Condition X",
+    condition == "y" ~ "Condition Y"
+  )) %>%
+  ggplot(aes(
+    x = condition,
+    y = rating,
+    fill = condition
+  )) +
+  geom_bar(stat = "identity") +
+  coord_flip()
+```

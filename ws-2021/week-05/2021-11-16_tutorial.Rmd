@@ -1,0 +1,419 @@
+---
+title: "Statistics and Data Analysis Week 5"
+author: "Natalia"
+date: \today
+output:
+    html_document:
+    highlight: tango
+    theme: readable
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, error = F, message = F, warning = F)
+
+```
+
+These are some completely **optional** exercises dedicated to the topics covered by chapters 5 and 6 of [our web-book](https://michael-franke.github.io/intro-data-analysis/index.html).
+
+This sheet makes use of two R packages that you may not yet have installed, `datasauRus` (which contains an educational dataset for demonstrating summary statistics) and `scico` (scientific colour map palettes). You can install them by running the code chunk below:
+
+```{r, eval = F}
+install.packages("scico") # Scientific colour map palettes
+install.packages("datasauRus") # Datasaurus dataset
+```
+
+```{r libraries, include=FALSE, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(aida)
+theme_set(theme_aida()) # use the aida theme for plotting
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+                      cache = TRUE, fig.align = 'center')
+```
+
+# Summary statistics
+
+We will first look at the dataset called `Datasaurus Dozen` which contains 13 sets of observations of two variables, $x$ and $y$. Run the code below to display summary statistics for each of the 13 sets: the mean of $x$, mean of $y$, standard deviation of $x$, standard deviation of $y$, and Pearson correlation between $x$ and $y$.
+
+```{r}
+library(datasauRus)
+glimpse(datasaurus_dozen)
+datasaurus_dozen %>%
+  group_by(dataset) %>%
+  summarize(
+    mean_x    = mean(x),
+    mean_y    = mean(y),
+    std_dev_x = sd(x),
+    std_dev_y = sd(y),
+    corr_x_y  = cor(x, y)
+    )
+```
+The summary statistics for each of the 13 datasets are the same. Run the code below to create a scatterplot for each of the 13 datasets.
+
+```{r, fig.height=6, fig.width=6}
+ggplot(datasaurus_dozen, aes(x = x, y = y, colour = dataset)) +
+  geom_point(size = .5) +
+  theme(legend.position = "none") +
+  facet_wrap(~dataset, ncol = 4) +
+  scico::scale_color_scico_d(palette = "roma")
+```
+
+## Visualising multiple distributions in the same plot
+`netflix_titles` is a dataset that contains information such as duration, genre, release year, and rating for 7,787 movies and TV shows available on Netflix. The dataset was made available as part of *#TidyTuesday*.
+
+```{r}
+netflix_titles <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-04-20/netflix_titles.csv')
+glimpse(netflix_titles)
+```
+
+Run the code chunk below to plot a histogram of movie lengths (in minutes) for four movie genres, *Action & Adventure*, *Comedies*, *Documentaries*, and *Dramas*. (These genres were chosen arbitrarily—you can try swapping them out for other genres you are more interested in!)
+
+```{r}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(x = duration, fill = genre_1)) +
+  geom_histogram(binwidth = 5, alpha = .5) +
+  scico::scale_fill_scico_d(palette = "roma") +
+  labs(
+    x = "Duration (minutes)",
+    y = "Count",
+    title = "Duration of films on Netflix",
+    fill = "Genre")
+```
+Histograms with multiple overlapping groups can be hard to read. Edit the code below to get a grouped density plot that looks like this:
+
+![](https://raw.githubusercontent.com/nataliasc/statistics/main/week-05/img/plot-1.png)
+
+```{r, eval = F}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = duration,
+    fill = genre_1,
+    colour = genre_1)
+    ) +
+  ...
+  scico::scale_fill_scico_d(palette = "roma") +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Duration (minutes)",
+    y = "Density",
+    title = "Duration of films on Netflix",
+    fill = "Genre",
+    colour = "Genre"
+  )
+```
+
+***Solution***
+```{r}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = duration,
+    fill = genre_1,
+    colour = genre_1)
+    ) +
+  geom_density(alpha = .35) +
+  scico::scale_fill_scico_d(palette = "roma") +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Duration (minutes)",
+    y = "Density",
+    title = "Duration of films on Netflix",
+    fill = "Genre",
+    colour = "Genre")
+```
+
+Density plots can't show if the data are very sparse or very dense. To get a feeling for how many entries are in each group, we can plot the individual data points for each genre directly by using `geom_point`, and `genre` as the variable on the $x$ axis. (This kind of plot is called a *strip chart*).
+
+```{r}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(x = genre_1, y = duration, colour = genre_1)) +
+  geom_point(size = .5, alpha = .65) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration"
+  ) +
+  theme(legend.position = "none")
+```
+However, in the plot above, there are too many points plotted on top of each other. To prevent overplotting, we can spread the data points slightly along the $x$ axis.
+
+Edit the code chunk below to get a plot that looks like this:
+
+![](https://raw.githubusercontent.com/nataliasc/statistics/main/week-05/img/plot-2.png)
+
+```{r, eval = F}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = genre_1,
+    y = duration,
+    colour = genre_1)
+    ) +
+  ...
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration (minutes)"
+  ) +
+  theme(legend.position = "none")
+```
+
+***Solution***
+```{r}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = genre_1,
+    y = duration,
+    colour = genre_1)
+    ) +
+  geom_jitter(size = .5, alpha = .65) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration (minutes)"
+  ) +
+  theme(legend.position = "none")
+```
+
+In the preceding plots, the film genres on the $x$ axis are ordered alphabetically, but we may want to sort them by median duration instead:
+
+![](https://raw.githubusercontent.com/nataliasc/statistics/main/week-05/img/plot-3.png)
+
+Edit the code chunk below to rearrange the values on the $x$ axis.
+
+```{r, eval = F}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = ...
+    y = duration,
+    colour = genre_1)
+    ) +
+  geom_jitter(size = .5, alpha = .65) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration (minutes)"
+  ) +
+  theme(legend.position = "none")
+```
+
+***Solution***
+
+```{r}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = fct_reorder(genre_1, duration, .fun = median),
+    y = duration,
+    colour = genre_1)
+    ) +
+  geom_jitter(size = .5, alpha = .65) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration (minutes)"
+  ) +
+  theme(legend.position = "none")
+```
+
+We may want to combine density plots and jittered point plots in the same figure (check [Section 6.4 of the web book](https://michael-franke.github.io/intro-data-analysis/Chap-02-04-geoms.html)).
+Extend the code below to get a figure that looks like this:
+
+![](https://raw.githubusercontent.com/nataliasc/statistics/main/week-05/img/plot-4.png)
+
+```{r, eval = F}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = fct_reorder(genre_1, duration, .fun = median),
+    y = duration,
+    colour = genre_1,
+    fill = genre_1)
+    ) +
+  geom_jitter(size = .5, alpha = .25) +
+  ...
+  scico::scale_colour_scico_d(palette = "roma") +
+  scico::scale_fill_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration (minutes)"
+  ) +
+  theme(legend.position = "none")
+```
+
+***Solution***
+
+```{r}
+netflix_titles %>%
+  separate(
+    col = listed_in,
+    into = str_c("genre_", 1:3),
+    sep = ",",
+    extra = "drop") %>% 
+  filter(genre_1 %in% c(
+    "Action & Adventure",
+    "Comedies",
+    "Documentaries",
+    "Dramas")
+    ) %>%
+  mutate(duration = as.numeric(str_extract(duration, "[:digit:]+"))) %>%
+  ggplot(aes(
+    x = fct_reorder(genre_1, duration, .fun = median),
+    y = duration,
+    colour = genre_1,
+    fill = genre_1)
+    ) +
+  geom_jitter(size = .5, alpha = .25) +
+  geom_violin(alpha = .3) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  scico::scale_fill_scico_d(palette = "roma") +
+  labs(
+    x = "Genre",
+    y = "Duration (minutes)"
+  ) +
+  theme(legend.position = "none")
+```
+
+New movies and TV shows are added to Netflix every year. You can plot the number of new titles added per year using `geom_line` as shown in [the web book](https://michael-franke.github.io/intro-data-analysis/Chap-02-04-geoms.html#line). Use the data in the `type` column of `netflix_titles` to plot two lines, one for newly added TV shows and one for movies:
+
+![](https://raw.githubusercontent.com/nataliasc/statistics/main/week-05/img/plot-5.png)
+```{r, eval=F}
+library(lubridate) # this is helpful for working with dates
+
+netflix_titles %>% 
+  mutate(year_added = ...) %>% 
+  group_by(...) %>%
+  ... %>% 
+  ggplot(aes(..., ..., colour = type)) +
+  geom_line(size = 2, alpha = .75) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Year",
+    y = "New titles added",
+    colour = "Type"
+  )
+```
+
+***Solution***
+```{r}
+library(lubridate)
+netflix_titles %>% 
+  mutate(year_added = year(mdy(date_added))) %>% 
+  group_by(year_added, type) %>%
+  count(year_added, type) %>% 
+  ggplot(aes(year_added, n, colour = type)) +
+  geom_line(size = 2, alpha = .75) +
+  scico::scale_colour_scico_d(palette = "roma") +
+  labs(
+    x = "Year",
+    y = "New titles added",
+    colour = "Type"
+  )
+```
+
+
+## References
+The `netflix_titles` dataset was made available as part of **#TidyTuesday**.
+
+Thomas Mock (2021). Tidy Tuesday: A weekly data project aimed at the R ecosystem. <https://github.com/rfordatascience/tidytuesday>

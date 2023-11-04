@@ -1,0 +1,483 @@
+---
+title: "Final take-home exam"
+date: 'Due: Thursday, February 17 by 20:00 CET'
+author: ""
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, error = F, message = F, warning = F)
+
+```
+
+```{r libraries, include=FALSE, message=FALSE, warning=FALSE}
+
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library(tidyverse)
+
+# package for this course
+library(aida)
+
+# package for Bayesian regression
+library(brms)
+
+# parallel execution of Stan code
+options(mc.cores = parallel::detectCores())
+
+# use the aida-theme for plotting
+theme_set(theme_aida())
+
+# global color scheme / non-optimized
+project_colors = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000")
+
+# setting theme colors globally
+scale_colour_discrete <- function(...) {
+  scale_colour_manual(..., values = project_colors)
+}
+scale_fill_discrete <- function(...) {
+   scale_fill_manual(..., values = project_colors)
+}
+
+# nicer global knitr options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE,
+                      cache = TRUE, fig.align = 'center')
+```
+
+# Instructions
+
+* Create an Rmd-file with your group number (equivalent to StudIP group) in the 'author' heading and answer the following questions.
+* When all answers are ready, 'Knit' the document to produce a HTML file.
+* Create a ZIP archive called "IDA-final-Group-XYZ.zip" (where 'XYZ' is *your* group number) containing:
+   * an R Markdown file "IDA-final-Group-XYZ.Rmd"
+   * a knitted HTML document "IDA-final-Group-XYZ.html"
+   * any other files necessary to compile your Rmarkdown to HTML (data, pictures etc.)
+* Upload the ZIP archive on Stud.IP in your group folder before the deadline (see above). You may upload as many times as you like before the deadline, only your final submission will count.
+* If you run `brms::brm` in an R code chunk, make sure to include `results='hide'` as an option to that code chunk to suppress the output of Stan.
+* If you have questions, pose them on StudIP in the new section for questions on the exam. Obviously, do **not** post solutions.
+* Work together with your group. Every group should work on their own.
+
+# <span style = "color:firebrick">Exercise 1:</span> Identify hypotheses & relevant measures [9 points]
+
+Read the paper by Prochownik et al. (2021) carefully.
+The focus for us is on the sections "Methods" and "Results".
+
+Supplementary materials for the paper are available from this OSF repository: <https://osf.io/wfpzc/>
+
+The data we will be working with are in the file `data.csv`, and you can use the table below to check what the numbers in the column called `Group_code` mean.
+
+|Group code                              |  |
+|:---------------------------------------|:-|
+|beginning law students                  | 0|
+|advanced law students                   | 1|
+|advanced philosophy students            | 2|
+|advanced natural science students       | 3|
+|lay people with no university education | 4|
+
+## Ex 1.a Identify the research hypotheses [4 points]
+
+<!-- 0.5 points for each hypothesis of which 0.25 points for correctly identifying the variables in the data set -->
+
+Prochownik et al. investigate whether blame blocking effect occurs in student and lay populations in Germany. The blame blocking effect means that people will issue a more severe punishment to an agent who tries (but fails) to harm a person than to an agent in an identical scenario (the agent trying and failing to harm) if the intended harm actually happens through actions of a different person or by accident.
+
+Prochownik et al. address several research hypotheses contrasting decisions made by participants with different educational background, and they conduct several statistical analyses.
+
+Here's a formulation of Prochownik et al.'s hypothesis concerning advanced law students:
+
+> "Advanced law students": There is no blame blocking effect for advanced law students (defined as at least third semester students, level `1` in the column `Group_code`), i.e. there is no difference between the amount of prison time participants assign to the agent in the harm versus no-harm condition (column `Condition_name`) for this population. The dependent variable (the amount of prison time participants assign to the agent) is stored in the columns called `Allergy_DV` and `Const_DV`.
+
+Formulate other hypotheses addressed by Prochownik et al.'s Experiment 1 and Experiment 2 in natural language as precisely as possible, using -wherever possible- reference to the names and/or values of variables in the data set supplied by Prochownik et al., following the above example.
+(That is, if some hypothesis relates to a dependent or independent variable, then add the information of where in the data set this variable is stored, and/or which values of it you are referring to precisely.)
+
+To complete this task, you can also refer to the following two repositories that contain the preregistrations for this paper (however, it is prudent to compare the preregistration with the final paper):
+
+* Experiment 1 preregistration https://osf.io/hk7p8
+* Experiment 2 preregistration https://osf.io/ues95
+
+**Solution:**
+
+> Student population comparison: The blame blocking effect would be lower in advanced law students (expert subjects) than in the other three non-expert populations (information on population membership is contained in the column `Group_code`).
+
+> 2.	Blame blocking effect occurs for beginner law students (first weeks of their first term), i.e. harsher punishment will be assigned in no-harm condition, as compared to the harm-condition.
+3.	Blame blocking effect occurs for advanced philosophy students (at least third term students), i.e., harsher punishment will be assigned in no-harm condition, as compared to the harm-condition.
+4.	Blame blocking effect occurs for advanced students of a natural science (e.g., chemistry, physics, biology, astronomy, geosciences), i.e., harsher punishment will be assigned in no-harm condition, as compared to the harm-condition
+5.	Blame blocking effect for advanced philosophy students > blame blocking effect for advanced law students.
+6.	Blame blocking effect for advanced students in natural science > blame blocking effect for advanced law students.
+7.	Blame blocking effect for beginner law students > blame blocking effect for advanced law students.
+All predictions for the data collapsed over the (within-subject) Vignette factor.
+
+
+> Lay people: There is an impact of Harm vs. No Harm (column `Condition_name`) on judgments of punishment in the lay population (level `4` of the factor `Group_code`).
+
+## Ex 1.b Results reported in the paper [4 points]
+
+<!-- 0.5 point per hypothesis -->
+
+What results do Prochownik et al. report for the hypotheses?
+Make a short statement for each hypothesis listed above, e.g., "find evidence for/against" or "find no evidence", for each hypothesis.
+(Don't overthink this! The question is about what the authors conclude from their analyses. No need to go down the rabbit hole here and triple-check whether you would draw similar conclusions from the reported analyses.)
+
+**Solution:**
+
+> Prochownik et al. find no evidence for blame blocking effect in the four different student groups.
+
+> For lay population, Prochownik et al. report no evidence of blame blocking effect (no difference between Harm vs No Harm condition). After discretising the punishment variable (punishment vs. no punishment), they find a significant blame blocking effect for the "construction" vignette only.
+
+## Ex 1.c Kind of experiment [1 point]
+
+<!-- 1 point if fully correct -->
+
+What kind of experiment is this? I.e., which independent (explanatory) variables are there? Are they metric or categorical factors? If factors, how many levels (ordered, unordered?) do they have? Any within- or between-subjects manipulations?
+
+**Solution:**
+
+Condition ("Harm" or "No Harm") is a between-subjects factor. The `Condition_name` variable has two unordered levels, implemented as a between-subjects manipulation. Vignette ("allergy" or "construction") is a within-subjects manipulation. In the raw data that were shared, responses for "allergy" and "construction" vignettes are contained in the `Allergy_DV` and `Construction_DV` columns. Some of the analyses in the paper collapse over the `vignette` factor. Population (column `Group_code`) is a between-subjects unordered factor.
+
+# <span style = "color:firebrick">Exercise 2:</span> Inspect the data [11 points]
+
+We load the data:
+
+```{r}
+d <- read_csv('data.csv')
+```
+
+## Ex 2.a Get some counts [2 points]
+
+<!-- one point for each -->
+
+Use R to retrieve:
+
+- the number of participants contained in the data set
+- the number of times condition (`Harm` and `No Harm`) occurs in the data
+
+**Solution:**
+
+```{r}
+# number of participants in data set
+d$ResponseId %>% unique() %>% length()
+```
+
+```{r}
+# number of times each condition occurs
+d %>% count(Condition_name)
+```
+
+## Ex 2.b Tidy up Part 1 [2 points]
+
+<!-- 2 points for correct pivoting -->
+
+In some of our subsequent analyses, we will be interested in the response of each participant for each vignette.
+For this purpose, the data in `d` is not tidy because responses for the two vignettes are saved in two different columns, `Allergy_DV` and `Const_DV`.
+Use common `dplyr` functions to create a new variable `d_tidy` which contains the same data as `d` in a tidy format.
+So, `d_tidy` will include one row for each individual decision of each participant (the length of the prison sentence the participant thinks the agent deserves).
+Name the two new columns you will create by pivoting `vignette` and `sentence_length`.
+Include the output of `glimpse(d_tidy)`.
+
+**Solution:**
+
+```{r}
+d_tidy <- d %>%
+  pivot_longer(cols = c(Allergy_DV, Const_DV),
+               names_to = "vignette",
+               values_to = "sentence_length") %>%
+  mutate(vignette = case_when(
+    vignette == "Allergy_DV" ~ "Allergy",
+    vignette == "Const_DV"   ~ "Construction"
+    )
+  )
+glimpse(d_tidy)
+```
+
+## Ex 2.c Tidy up Part 2 [1 point]
+
+<!-- 1 point per column -->
+
+The tibble in `d_tidy` contains a `Group_code` column with entries like `0` or `4` which stand for different educational backgrounds.
+Introduce a new column called `group`, which contains the same information in text form, i.e. a factor with levels `beginning law students`, `advanced law students`, `advanced philosophy students`, `advanced natural science students`, and `lay people`. Use the information about group codes in the table below.
+
+|Group code                              |  |
+|:---------------------------------------|:-|
+|beginning law students                  | 0|
+|advanced law students                   | 1|
+|advanced philosophy students            | 2|
+|advanced natural science students       | 3|
+|lay people with no university education | 4|
+
+**Solution**:
+
+```{r}
+d_tidy <- d_tidy %>%
+  mutate(
+    group = case_when(
+      Group_code == 0 ~ "beginning law students",
+      Group_code == 1 ~ "advanced law students",
+      Group_code == 2 ~ "advanced philosophy students",
+      Group_code == 3 ~ "advanced natural science students",
+      Group_code == 4 ~ "lay people"
+    )
+  ) %>%
+  mutate(group = factor(group, levels = c("beginning law students",
+                                          "advanced law students",
+                                          "advanced philosophy students",
+                                          "advanced natural science students",
+                                          "lay people")))
+d_tidy
+```
+
+## Ex 2.d Double-check relevant summary stats reported for lay people [3 points]
+
+<!-- 1.5 points per check -->
+
+Checking other researchers' results is not imprudent, but part of a healthy self-correcting and cooperative scientific community.
+Therefore, recheck the percentages reported by Prochownik et al. in the excerpt from the Results section quoted below:
+
+> For the sake of these tests, we recoded all no punishment responses to “0” and all punishment responses (from 1 to 25) to “1”. In the allergy story, there was no difference in the frequencies of “no punishment” vs “any punishment” across two conditions: 20.5% assigned “no punishment” in the harm condition comparing to 16.9% in the no-harm condition [...]. In the construction story, we found a significant blame blocking effect: 18.9% assigned “no punishment” in the harm condition comparing to 6.9% in the no-harm condition [...]. (p. 2327)
+
+To recode the responses to 0 and 1, you will need to create a new variable that you can call `binary_response`. You will also need to subset the data so that you look at the lay population only.
+
+**Solution:**
+
+```{r}
+d_tidy <- d_tidy %>%
+  mutate(
+    binary_response = if_else(sentence_length > 0, 1, 0)
+    )
+d_tidy %>%
+  filter(group == "lay people") %>%
+  group_by(vignette, Condition_name) %>%
+  summarise(no_punishment_percent = 1 - mean(binary_response))
+```
+
+## Ex 2.e Summary statistics [3 points]
+
+<!-- 1 point for `dplyr` functions -->
+<!-- 1 point for using `aida::bootstrapped_CI` -->
+<!-- 1 point for correct form of tibble -->
+
+Use common `dplyr` functions, as well as the function `aida::bootstrapped_CI` to produce a tibble with the exact form as shown below (including ordering of rows and columns, as well as column names!) showing the mean, the lower- and the upper-bound of the 95% bootstrapped confidence interval of the mean prison sentence lengths as chosen by different participant groups (as returned by `aida::bootstrapped_CI`).
+
+```{r, echo = F}
+# your output should conform to this form-template
+tribble(
+  ~"group", ~"Condition_name", ~"vignette", ~"lower", ~"mean", ~"upper",
+  "beginning law students", "Harm", "Allergy", "...", "...", "...",
+  "beginning law students", "Harm", "Construction", "...", "...", "...",
+  "beginning law students", "No Harm", "Allergy", "...", "...", "...",
+  "beginning law students", "No Harm", "Construction", "...", "...", "...",
+  "advanced law students", "Harm", "Allergy", "...", "...", "...",
+  "advanced law students", "Harm", "Construction", "...", "...", "...",
+  "advanced law students", "No Harm", "Allergy", "...", "...", "...",
+  "advanced law students", "No Harm", "Construction", "...", "...", "...",
+  "advanced philosophy students", "Harm", "Allergy", "...", "...", "...",
+  "advanced philosophy students", "Harm", "Construction", "...", "...", "...",
+  "advanced philosophy students", "No Harm", "Allergy", "...", "...", "...",
+  "advanced philosophy students", "No Harm", "Construction", "...", "...", "...",
+  "advanced natural science students", "Harm", "Allergy", "...", "...", "...",
+  "advanced natural science students", "Harm", "Construction", "...", "...", "...",
+  "advanced natural science students", "No Harm", "Allergy", "...", "...", "...",
+  "advanced natural science students", "No Harm", "Construction", "...", "...", "...",
+  "lay people", "Harm", "Allergy", "...", "...", "...",
+  "lay people", "Harm", "Construction", "...", "...", "...",
+  "lay people", "No Harm", "Allergy", "...", "...", "...",
+  "lay people", "No Harm", "Construction", "...", "...", "..."
+)
+```
+
+**Solution:**
+
+```{r}
+d_tidy %>%
+  select(ResponseId, Condition_name, vignette, group, sentence_length) %>%
+  group_by(group, Condition_name, vignette) %>%
+  summarize(
+    aida::bootstrapped_CI(sentence_length)
+  ) %>%
+  ungroup() %>%
+  arrange(group)
+```
+
+# <span style = "color:firebrick">Exercise 3:</span> Visualization [7 points]
+
+We will plot the data, and for your own understanding, think about whether you can "see evidence" in favor of or against the hypotheses you wrote down above.
+(You do not have to comment on this in your submission.)
+
+## Ex 3.a Visualise the response distributions [2 points]
+
+Plot a histogram of all participants' responses (i.e. prison sentence lengths) for the Harm vs No Harm condition. Use facetting for the two different vignettes. Pick a sensible bin width.
+
+```{r}
+d_tidy %>%
+  ggplot(aes(x = sentence_length, fill = Condition_name)) +
+  geom_histogram(binwidth = 1, alpha = .85) +
+  facet_wrap(~ vignette) +
+  labs(x = "Sentence length",
+      y = "") +
+  guides(fill = guide_legend("Condition"))
+```
+
+## Ex 3.b Visualize the Experiment 1 data [3 points]
+
+<!-- 2 for correct plot; 1 for adjusting binwidth -->
+
+Visualize the data collected during Experiment 1 (four different student populations).
+
+Use a bar plot to display mean prison sentence lengths selected by different student groups. Use different colours for Harm vs No Harm condition.
+You may use `coord_flip()` to flip the x and y axes.
+
+Use two facets, one for each vignette.
+
+**Solution:**
+
+```{r}
+d_tidy %>%
+  filter(group != "lay people") %>%
+  group_by(group, Condition_name, vignette) %>%
+  summarise(mean = mean(sentence_length)) %>%
+  ggplot(aes(x = fct_rev(group), y = mean, fill = Condition_name)) +
+  geom_col(position = "dodge", alpha = .85) +
+  facet_wrap(~ vignette) +
+  coord_flip() +
+  labs(x = "",
+      y = "Mean sentence length (years)") +
+  guides(fill = guide_legend("Condition"))
+```
+
+## Ex 3.c Visualize the Experiment 2 data [2 points]
+
+<!-- 2 for correct plot -->
+
+Make a bar plot for the data gathered during Experiment 2 (i.e. lay people's responses). The bar plot should show the mean prison sentence lengths for the two vignettes, and Harm and No Harm conditions.
+
+**Solution:**
+
+```{r}
+d_tidy %>%
+  filter(group == "lay people") %>%
+  group_by(Condition_name, vignette) %>%
+  summarise(
+    mean = mean(sentence_length)
+    ) %>%
+  ggplot(aes(x = vignette, y = mean, fill = Condition_name)) +
+  geom_col(position = "dodge", alpha = .8) +
+  labs(x = "",
+      y = "Mean sentence length (years)") +
+  guides(fill = guide_legend("Condition"))
+```
+
+# <span style = "color:firebrick">Exercise 4:</span> Hypothesis testing [22 points]
+
+## Ex 4.a Presence of blame blocking effect in the advanced law student population [6 points]
+
+<!-- 2 points for running the model with correct data and formula -->
+<!-- 1 prior for correctly setting the prior -->
+<!-- (subtract 0.5 for failing to record the prior samples) -->
+<!-- 1 point for calling the hypothesis function correctly -->
+<!-- 2 points for correct interpretation -->
+
+Test the hypothesis about the presence of blame blocking effect in the advanced law students population (the hypothesis is given above) using a Bayesian linear regression model.
+Make sure to also record samples from the prior (even if we don't need them), and set the relevant priors for the slope term to a Student's $t$ distribution with 1 degree of freedom, mean 0 and standard deviation 100.
+Test the hypothesis with `brms::hypothesis` and interpret the outcome with explicit mentioning of the quantities you base your interpretation on.
+
+**Solution:**
+
+```{r, results = "hide"}
+fit_adv <- brms::brm(
+  formula = sentence_length ~ Condition_name,
+  data = filter(d_tidy, group == "advanced law students"),
+  prior = prior(student_t(1, 0, 100), coef = Condition_nameNoHarm),
+  sample_prior = 'yes'
+)
+```
+
+```{r}
+brms::hypothesis(fit_adv, "Condition_nameNoHarm > 0")
+```
+
+> The evidence ratio in favor of the hypothesis is around 0.54, so this is only very weak evidence in its favor.
+
+## Ex 4.b Comparing decisions made by different student populations [8 points]
+
+<!-- 2 points for analyzing the data as Bernoulli data -->
+<!-- 1 point for correctly identifying why Accuracy is not normally distributed -->
+<!-- 3 points for setting up the correct test -->
+<!-- 2 points for correct interpretation of results -->
+
+Prochownik et al. write:
+
+> Our further hypotheses concerned specific comparisons between the four groups. We predicted that the blame blocking effect would be lower in advanced law students (i.e., expert subjects) than in the other three non-expert populations. (p. 2325)
+ 
+Test the hypothesis that the blame blocking effect is lower for advanced law students than for advanced philosophy students using a Bayesian linear regression model. Set priors in the same way as described in 4a. Compare your results to what Prochownik et al. report.
+
+**Solution:**
+
+```{r, results = "hide"}
+fit_comparison <- brms::brm(
+  formula = sentence_length ~ Condition_name * group + vignette,
+  data = filter(d_tidy, group %in% c("advanced law students", "advanced philosophy students")),
+  prior = prior(student_t(1, 0, 100), class = 'b'),
+  sample_prior = 'yes'
+)
+```
+
+```{r}
+brms::hypothesis(fit_comparison, "Condition_nameNoHarm:groupadvancedphilosophystudents > Condition_nameNoHarm")
+```
+
+> The evidence ratio in favor of the hypothesis that blame blocking effect in advanced philosophy students is higher than in advanced law students is around 2.34, so this is only anecdotal evidence in its favor. 
+
+## Ex 4.c Blame blocking effect in lay population [8 points]
+
+<!-- 2 points for analyzing the data as Bernoulli data -->
+<!-- 4 points for setting up the correct test -->
+<!-- 2 points for correct interpretation of results -->
+
+For this task, we will be looking at the responses of lay people only. (Subset the full data set accordingly.) Prochownik et al. recode numerical responses by setting all "no punishment" responses to 0, and all "punishment" responses to 1 (i.e., the new response variable is binary), and then conduct two chi-square tests for the two vignettes ("Allergy" and "Construction"). You have already created the `binary_response` variable in Task 2d. Think of a suitable analysis that would use this binary variable, carry it out and interpret your findings.
+
+**Solution:**
+
+We use logistic regression:
+
+```{r, results = "hide"}
+d_tidy <- d_tidy %>%
+  mutate(
+    binary_response = sentence_length > 0
+    )
+
+fit_lay <- brms::brm(
+  formula = binary_response ~ Condition_name,
+  data = d_tidy %>%
+    filter(group == "lay people"),
+  family = bernoulli(link = "logit"),
+  prior = prior(student_t(1, 0, 100), coef = Condition_nameNoHarm),
+  sample_prior = 'yes'
+)
+```
+
+```{r}
+brms::hypothesis(fit_lay, "Condition_nameNoHarm > 0")
+```
+
+> Judging from the estimated evidence ratio, there is strong evidence in support of the presence of blame blocking effect in lay population.
+
+# <span style = "color:firebrick">Exercise 5 (Theory Task):</span> Comparing Bayesian & frequentist approaches to testing [6 points]
+
+In this course we have looked at both Bayesian and frequentist approaches to statistics. In the future, you may have to choose between them. List three differences between Bayesian and frequentist approaches to hypothesis testing. For each of these differences, state whether this difference speaks in favor of a Bayesian or a frequentist approach.
+
+**Solution:**
+
+a. Bayesian analysis requires priors, but also makes it possible to use priors. Some consider this an
+advantage, others a disadvantage, depending on taste, but also depending on whether a particular
+application makes it possible and reasonable to use prior information.
+b. Bayesian analysis requires more information as input (priors) but also gives more information as output.
+The Bayesian approach to hypothesis testing based on estimation gives, for instance, a full posterior
+distribution, not just a point and/or interval-estimate. Having more information can be an advantage, e.g.,
+for decision making.
+c. Frequentist approaches to hypothesis testing (as far as we discussed them in class) can only deliver
+evidence against the null hypothesis. Bayesian approaches, especially when using Bayes factors for
+nested model comparison, can also give us evidence in favor of the null hypothesis.
+
+(There are more than those three possibilities to answer this question.)

@@ -1,0 +1,203 @@
+---
+title: "Plotting with ggplot"
+output: html_document
+date: "2022-11-22"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = T, error = F, message = F, warning = F)
+```
+
+# The dataset.
+
+We are using the Palmer Penguins dataset created by Allison Horst. Upload the `palmerpenguins` package and take a look inside the dataset with `glimpse()` function.
+
+```{r}
+library(palmerpenguins)
+tibble::glimpse(penguins)
+```
+
+Before we proceed with plotting, we will remove the `NAs` from the dataset with the `na.omit()` function. We will store the pre-processed data in a variable called `pngs` for the later use. 
+
+```{r}
+pngs <- na.omit(penguins)
+```
+
+# The default `ggplot`.
+
+Upload the `tidyverse` package to use the functionality of `{ggplot2}`.
+
+```{r}
+library(tidyverse)
+```
+
+The syntax of `{ggplot}` requires three things to specify:
+
+  * data
+  * aesthetics
+  * geometry
+  
+We define the plotting object by calling `ggplot(data=df)` which defines the data we are going to work with. 
+
+We specify the data outside `aes()` and add the variables that `ggplot` maps the aesthetics to inside `aes()`.
+
+We define the positional aesthetics by adding `aes(x=var1, y=var2)` to the `ggplot()` call. 
+
+Next, we define the geometries with, e.g., `geom_point()` to create a scatter plot. There are multiple geometries (starting with `geom_`) one can choose from.
+
+
+```{r}
+(g <- ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)))
+```
+
+In the plot above, the `{ggplot2}` doesn't know yet how we want to plot the data. Let's choose `geom_point()` to create a scatter plot of our data.
+
+```{r}
+g + geom_point()
+```
+
+# Change the properties of geometries. 
+
+You can manipulate visual aesthetics such as color, shape, and size of points within the `geom_*` command.
+
+You can choose from [preset colors](http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf), [hex color codes](https://www.color-hex.com/), both in quotes, or *RGB* colors with `rgb()` function.
+
+```{r}
+g + geom_point(color="firebrick", shape="diamond", size=2)
+```
+
+# Replace the default `ggplot2` theme.
+
+Let's set a different built-in theme, e.g, `theme_bw()`.
+
+With `theme()` you can modify such elements as texts, rectangles, and lines.
+
+```{r}
+theme_set(theme_bw())
+
+g + geom_point(color="firebrick")
+```
+
+# Working with axes.
+
+Let's change the axis titles by using `labs()` function.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)")
+```
+
+You can increase space between axis and axis titles with `theme()` function. We can overwrite the default `element_text()` within `theme()` call. `vjust` is the vertical alignment.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  theme(axis.title.x = element_text(vjust = 0, size = 12),
+        axis.title.y = element_text(vjust = 2, size = 12))
+```
+
+You can also use `margin()` function to adjust the titles. The labels `t` and `r` refer to *top* and *right*.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  theme(axis.title.x = element_text(margin = margin(t = 10), size = 12),
+        axis.title.y = element_text(margin = margin(r = 10), size = 12))
+```
+
+You can also change the aesthetics of axis titles.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  theme(axis.title = element_text(size = 12, color="firebrick", face="italic"))
+```
+
+You can change the aesthetics of the axis text.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  theme(axis.text = element_text(size = 12, color="deepskyblue", face="italic"))
+```
+
+You can rotate the axis text by specifying the `angle`. You can adjust the position vertically with `hjust` and horizontally with `vjust`.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  theme(axis.text.x = element_text(angle = 50, vjust = 1, hjust = 1, size = 12))
+```
+
+You can limit the axis range, i.e., look closer at a specific data range (without sub-setting the data).
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  xlim(c(4000,5000))
+```
+
+You can alter your labels.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y=NULL) + 
+  scale_y_continuous(label=function(x) {return(paste(x, "mm"))})
+```
+
+# Working with titles.
+
+We can use `ggtitle()` to add the title.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)") + 
+  ggtitle("Flipper Length in Penguins")
+```
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color="firebrick") + 
+  labs(x="Body Mass", y="Flipper Length (mm)",
+       title="Flipper Length in Penguins",
+       subtitle="Flipper length per body mass in penguins",
+       caption="Data: Palmer Penguins",
+       tag="Fig.1")
+```
+
+# Working with legends.
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm, color=species)) + 
+  geom_point() + 
+  labs(x="Body Mass", y="Flipper Length (mm)")
+```
+
+```{r}
+ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm, color=species, shape=species)) + 
+  geom_point() + 
+  labs(x="Body Mass", y="Flipper Length (mm)") +
+  guides(color = "none")
+```
+
+# Working with facets.
+
+```{r}
+g <- ggplot(pngs, aes(x=body_mass_g, y=flipper_length_mm)) + 
+  geom_point(color = "chartreuse4", alpha = .3) + 
+  labs(x="Body Mass", y="Flipper Length (mm)") +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
+
+g + facet_wrap(~species)
+```
+
+

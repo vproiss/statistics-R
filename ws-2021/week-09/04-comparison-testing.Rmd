@@ -1,0 +1,199 @@
+---
+title: "Homework Sheet 4 -- Model comparison and hypothesis testing"
+date: 'Due: Wednesday, January 13, 2022 by 16:00 CET'
+author: ""
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, error = F, message = F, warning = F)
+
+```
+
+```{r libraries, include=FALSE, message=FALSE, warning=FALSE}
+
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library(tidyverse)
+
+# package for this course
+library(aida)
+
+# use the aida-theme for plotting
+theme_set(theme_aida())
+
+# global color scheme / non-optimized
+project_colors = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000")
+
+# setting theme colors globally
+scale_colour_discrete <- function(...) {
+  scale_colour_manual(..., values = project_colors)
+}
+scale_fill_discrete <- function(...) {
+   scale_fill_manual(..., values = project_colors)
+} 
+
+# nicer global knitr options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+                      cache = TRUE, fig.align = 'center')
+
+
+```
+
+# Instructions
+
+* Create an Rmd-file with your group number (equivalent to StudIP group) in the 'author' heading and answer the following questions.
+* When all answers are ready, 'Knit' the document to produce a HTML file.
+* Create a ZIP archive called "IDA_HW04-Group-XYZ.zip" (where 'XYZ' is *your* group number) containing:
+   * an R Markdown file "IDA_HW04-Group-XYZ.Rmd"
+   * a knitted HTML document "IDA_HW04-Group-XYZ.html"
+   * any other files necessary to compile your Rmarkdown to HTML (data, pictures etc.)
+* Upload the ZIP archive on Stud.IP in your group folder before the deadline (see above). You may upload as many times as you like before the deadline, only your final submission will count.
+
+# <span style = "color:firebrick">Exercise 1:</span> Inspect, preprocess & plot the data [15 points]
+
+## Ex 1.a Load and inspect the data [1 point]
+
+Load the data into a variable called `data_ST` and display the first seven rows of the data set.
+
+**Solution:** 
+
+## Ex 1.b Determine the number of participants [1 point]
+
+Use R to extract the number of participants in the data set.
+
+**Solution:**
+
+
+## Ex 1.c Identify variables of interest [2 points]
+
+Based on the hypotheses formulated in [Chapter D.2 of the web-book](https://michael-franke.github.io/intro-data-analysis/app-93-data-sets-simon-task.html), which of the columns in the data tibble represent the main independent and dependent variables of interest?
+
+**Solution:**
+
+## Ex 1.d By-participant mean correctness and mean RT [2 points]
+
+Create a tibble in which each row shows the proportion of "correct" answers and the mean reaction time for a different participant. So, this tibble will have as many rows as there are participants in the data set. (**Hint:** Use a sequence of `group_by` and `summarize`.)
+
+Plot the by-participant summary statistics in this tibble in a scatter plot, showing the proportion of "correct" answers on the $x$-axis and the mean reaction times on the $y$-axis. (Just for clarity: Every point in this plot represents one participant.)
+
+(Rationale for doing this: Even though we will not draw direct conclusions from this plot here, visualizing your data like shown here is usually a good way of getting familiar with what you are dealing with.))
+
+**Solution:**
+
+## Ex 1.e Remove participants [3 points]
+
+Remove all data from all participants who gave less than 50% correct answers or whose mean reaction time is smaller than 350ms or larger than 750ms.
+Use R to output information about how many participants have been excluded in this way.
+
+**Solution:**
+
+## Ex 1.f Remove individual trials [3 points]
+
+Exclude all trials with reaction times longer than 1 second or shorter than 100 ms.
+Use R to output information about how many trials have been excluded in this way.
+
+**Solution:**
+
+## Ex 1.g Show summary statistics [3 points]
+
+Produce a tibble which shows in each row, one row for each condition, the overall (group-level) proportion of correct answers and the mean of all reaction times per condition.
+
+What would you conclude based on these summary statistics about either or both of the relevant research hypotheses, as spelled out in [Chapter D.2 of the web-book](https://michael-franke.github.io/intro-data-analysis/app-93-data-sets-simon-task.html)?
+
+**Solution:**
+
+# <span style = "color:firebrick">Exercise 2:</span> Testing the accuracy hypothesis [20 points]
+
+## Ex 2.a A model for the accuracy difference [2 points]
+
+We want to test the directed hypothesis that the accuracy (i.e., the proportion of correct responses) is higher in the congruent condition than in the incongruent condition.
+To do so, we use a model which is very similar to the model we used for the BioNTec/Pfizer data from the last homework.
+The only difference is that we are not interested in the "efficiency" of a treatment, but in the plain difference $\delta = \theta_1 - \theta_2$ between the latent accuracy scores $\theta_1$ (for the congruent condition) and $\theta_2$ (for the incongruent condition).
+
+Here is the model in math.
+
+$$
+\begin{align*}
+  \theta_1 & \sim \text{Beta}(1,1) \\
+  k_1 & \sim \text{Binomial}(\theta_1, N_1) \\
+  \theta_1 & \sim \text{Beta}(1,1) \\
+  k_2 & \sim \text{Binomial}(\theta_2, N_2) \\
+  \delta & = \theta_1 - \theta_2
+\end{align*}
+$$
+
+Based on the conventions used in the webbook, draw a graphical representation of this model and include it using Rmarkdown into the HTML output of your submission. You can use a photo of a hand-drawn model, or use any kind of software. Just don’t waste too much time on the aesthetics! Make sure to include the picture in your ZIP-submission and integrate.
+
+## Ex 2.b Specify the accuracy hypothesis formally [1 points]
+
+State the *accuracy hypothesis* (that the accuracy (i.e., the proportion of correct responses) is higher in the congruent condition than in the incongruent condition) formally as a mathematical statement about a single variable of the model from above.
+
+**Solution:**
+
+## Ex 2.c Testing via estimation and Kruschke's ternary decision logic [10 points]
+
+Based on the model from above, we will test the accuracy hypothesis, using an estimation-based approach, based on 95% credible intervals and Kruschke's ternary decision logic for our final conclusions.
+
+To do this, follow these steps:
+
+1. get the relevant counts:
+  - number of "correct" answers $k_1$ out of $N_1$ congruent trials
+  - number of "correct" answers $k_2$ out of $N_2$ incongruent trials
+
+2. get 10,000 samples from the posterior of the latent parameters $\theta_1$ and $\theta_2$ using conjugacy
+
+3. compute (derived) samples from the posterior of $\delta$
+
+4. compute the 95% credible interval for the vector of samples of posterior values of $\delta$
+
+5. draw conclusions from this computation about the research hypothesis, following Kruschke's ternary decision logic
+
+**Solution:**
+
+## Ex 2.d Testing via comparison using an embedding model [7 points]
+
+We want to use the encompassing models approach to calculate the Bayes factor of the accuracy hypothesis compared against its logical complement.
+Notice that the model we specified in the first part of this exercise *is* an encompassing model which contains the accuracy hypothesis and its logical complement as special cases.
+As described in the web-book, we can use the following formula to compute the relevant Bayes factor.
+
+$$ 
+\begin{aligned}
+\text {BF}_{01} & = \frac{\text{posterior-odds of } H_0}{\text{prior-odds of } H_0}  \\
+& = \frac{P_M(\theta \in I_0 \mid D)}{P_M(\theta \not \in I_0 \mid D)} \frac{P_M(\theta \not \in I_0)}{P_M(\theta \in I_0)}
+\end{aligned}
+$$
+
+We are going to compute this quantity, approximately, using samples, following these steps.
+
+First, reason in intuitive (informal) language why we can safely neglect the prior odds term
+
+$$ 
+\begin{aligned}
+\frac{P_M(\theta \not \in I_0)}{P_M(\theta \in I_0)}
+\end{aligned}
+$$
+
+You could also give a mathematical proof, or any other (informal or formal) argument to support your case. (E.g., maybe a sampling-based argument.)
+
+**Solution:**
+
+Second, use the samples in `delta_samples` from the previous exercise to approximate:
+
+$$ 
+\begin{aligned}
+\frac{P_M(\theta \in I_0 \mid D)}{P_M(\theta \not \in I_0 \mid D)}
+\end{aligned}
+$$
+
+**Solution:**
+
+Third, interpret this result.
+
+**Solution:**
+
+

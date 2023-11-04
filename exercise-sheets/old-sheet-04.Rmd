@@ -1,0 +1,456 @@
+---
+title: "Homework Sheet 5 -- Regression modeling"
+date: 'Due: Monday, January 24 by 16:00 CET'
+author: ""
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, error = F, message = F, warning = F)
+
+```
+
+```{r libraries, include=FALSE, message=FALSE, warning=FALSE}
+
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library(tidyverse)
+
+# package for this course
+library(aida)
+
+# package for Bayesian regression
+library(brms)
+
+# parallel execution of Stan code
+options(mc.cores = parallel::detectCores())
+
+# use the aida-theme for plotting
+theme_set(theme_aida())
+
+# global color scheme / non-optimized
+project_colors = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000")
+
+# setting theme colors globally
+scale_colour_discrete <- function(...) {
+  scale_colour_manual(..., values = project_colors)
+}
+scale_fill_discrete <- function(...) {
+   scale_fill_manual(..., values = project_colors)
+} 
+
+# nicer global knitr options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+                      cache = TRUE, fig.align = 'center')
+```
+
+# Instructions
+
+* Create an Rmd-file with your group number (equivalent to StudIP group) in the 'author' heading and answer the following questions.
+* When all answers are ready, 'Knit' the document to produce a HTML file.
+* Create a ZIP archive called "IDA_HW05-Group-XYZ.zip" (where 'XYZ' is *your* group number) containing:
+   * an R Markdown file "IDA_HW05-Group-XYZ.Rmd"
+   * a knitted HTML document "IDA_HW05-Group-XYZ.html"
+   * any other files necessary to compile your Rmarkdown to HTML (data, pictures etc.)
+* Upload the ZIP archive on Stud.IP in your group folder before the deadline (see above). You may upload as many times as you like before the deadline, only your final submission will count.
+* If you run `brms::brm` in an R code chunk, make sure to include `results='hide'` as an option to that code chunk to suppress the output of Stan.
+
+# <span style = "color:firebrick">Exercise 1:</span> Difference coding in Mental Chronometry [20 points]
+
+The purpose of this exercise is to better understand coding schemes for categorical factors.
+We also would like to get more comfortable with testing hypotheses about regression coefficients in a Bayesian setting.
+Towards this end, we will construct a design matrix by hand to implement **simple difference coding**.
+We use the non-informative Bayesian regression model to efficiently sample from the posterior and test hypotheses about the Mental Chronometry data.
+In particular we are interested in the hypotheses spelled out in Appendix D.1.1.2 of the web-book, namely:
+
+- mean reaction times are lower for data from the 'reaction' block than for the 'goNoGo' block
+- mean reaction times are lower for data from the 'goNoGo' block than for the 'discrimination' block
+
+## Ex 1.a Prepare data [1 point]
+
+Create a variable `data_MC_excerpt` that contains all and only the relevant columns from the MC data set.
+The dependent variable should be the first column.
+
+```{r, eval = F}
+data_MC_excerpt <- aida::data_MC_cleaned %>% 
+  ... 
+```
+
+**Solution**
+
+```{r}
+data_MC_excerpt <- aida::data_MC_cleaned %>% 
+  select(RT, block) 
+```
+
+## Ex 1.b Get the empirical differences between means [2 points]
+
+<!-- one point per comparison -->
+
+Compute the following differences:
+
+1. the mean RT for condition `goNoGo` minus the mean RT for condition `reaction`
+2. the mean RT for condition `discrimination` minus the mean RT for condition `goNoGo`
+
+and store the result in the variables provided below (keep the brackets so that the values assigned show in the Rmarkdown output):
+
+```{r, eval = F}
+
+(`goNoGo-reaction`       <-  ... )
+(`discrimination-goNoGo` <-  ... )
+
+```
+
+**Solution:**
+
+```{r}
+
+mean_RTs <- data_MC_excerpt %>% group_by(block) %>% 
+  summarize(mean_RT = mean(RT)) %>% pull(mean_RT)
+
+(`goNoGo-reaction` <- mean_RTs[1] - mean_RTs[2])
+(`discrimination-goNoGo` <- mean_RTs[2] - mean_RTs[3])
+
+```
+
+## Ex 1.c Build predictor matrix [5 points]
+
+<!-- 1 point for column 'grand_mean'; 2 points each for the other two columns -->
+
+Add three columns to the data tibble `data_MC_excerpt`, like shown below.
+These columns should contain the numerical values to obtain so-called **simple difference coding** (as discussed in the initial video of Chapter 14, after ca. 10 minutes).
+
+```{r, eval = F}
+data_MC_excerpt <- data_MC_excerpt %>% 
+  mutate(
+    grand_mean  = ..., 
+    `goNoGo-reaction` = ...,
+    `discrimination-goNoGo` = ...
+  )
+```
+
+
+**Solution:**
+
+```{r}
+data_MC_excerpt <- data_MC_excerpt %>% 
+  mutate(
+    grand_mean  = 1, 
+    `goNoGo-reaction` = case_when(
+      block == "reaction" ~ -2/3,
+      block == "goNoGo" ~ 1/3,
+      block == "discrimination" ~ 1/3
+    ),
+    `discrimination-goNoGo` = case_when(
+      block == "reaction" ~ -1/3,
+      block == "goNoGo" ~ -1/3,
+      block == "discrimination" ~ 2/3
+    )
+  )
+```
+
+
+## Ex 1.d Run a Bayesian regression model [3 points]
+
+<!-- one point each for (i) extracting the right predictor matrix and (ii) for extracting the dependent variable; -->
+<!-- one point for calling the right function in the right way -->
+
+Use the function `aida::get_samples_regression_noninformative` to obtain 10,000 samples from the posterior distribution for a standard linear regression model.
+(Hint: Use `as.matrix` to extract the predictor matrix from the tibble you created in the previous step.)
+
+**Solution:**
+
+```{r}
+X <- as.matrix(data_MC_excerpt[,3:5])
+y <- data_MC_excerpt %>% pull(RT) %>% as.numeric()
+posterior_samples <- aida::get_samples_regression_noninformative(X, y, 10000)
+```
+
+
+## Ex 1.e Summary statistics [2 point]
+
+<!-- one point per coefficient for correctly calling the correct function -->
+
+Use the function `aida::summarize_sample_vector` to show Bayesian summary statistics for the two most relevant parameters (given the hypotheses we are interested in for the Mental Chronometry experiment).
+
+**Solution:**
+
+```{r}
+rbind(
+  aida::summarize_sample_vector(posterior_samples$`goNoGo-reaction`, 'goNoGo-reaction'),
+  aida::summarize_sample_vector(posterior_samples$`discrimination-goNoGo`, 'discrimination-goNoGo')
+)
+```
+
+## Ex 1.f Interpret your results [7 points]
+
+<!-- two points for correct explanation of what the coefficients represent (one for each) -->
+<!-- one point for correct explanation of the Bayesian summary stats -->
+<!-- two points for identifying the correct relation between credi.intervals and hypotheses  -->
+<!-- two points for correct formulation of the conclusions -->
+
+Interpret these results using a Kruschke-style logic applied to (non-ROPEd) interval-based hypotheses.
+In doing so, state clearly what the coefficients encode, what the numerical results of the last step mean, and what you would conclude from all this regarding any potential evidence (or lack thereof) for or against the research hypotheses.
+
+**Solution:**
+
+> The coefficients `goNoGo-reaction` and `discrimination-goNoGo` directly encode the relevant *differences* in reaction times between the means of the mentioned experimental blocks.
+> The Bayesian summary statistics give the 95% credible intervals for these estimates of differences.
+> In both cases, the credible values are all clearly positive, so that the 95% credible intervals are contained in the relevant hypotheses.
+> We may conclude from this that data and model provide rather clear-cut evidence in favor of both research hypotheses.
+
+
+# <span style = "color:firebrick">Exercise 2:</span> Analyzing the King of France [28 points]
+
+The purpose of this exercise is to practice with logistic regression and the interpretation of interaction terms.
+If you want to understand what this experiment is about, read the relevant appendix chapter in the web-book.
+
+We will be interested in the following research questions:
+
+- **H1**: The latent probability of "TRUE" judgements is higher in C0 (with presupposition) than in C1 (where the presupposition is part of the at-issue / asserted content).
+- **H2**: There is no difference in truth-value judgements between C0 (the positive sentence) and C6 (the negative sentence).
+- **H3**: The disposition towards "TRUE" judgements is lower for C9 (where the presupposition is topical) than for C10 (where the presupposition is not topical and occurs under negation).
+
+Load the data as follows (also applying some massaging, similar to what's done in the web-book):
+
+```{r }
+IDA_data_KoF <- read_csv('data_KoF-IDA-2020.csv') %>% 
+  # discard practice trials
+  filter(type != "practice") %>% 
+  mutate(
+    # add a 'condition' variable
+    condition = case_when(
+      type == "special" ~ "background check",
+      type == "main" ~ str_c("Condition ", condition),
+      TRUE ~ "filler"
+    ) %>% 
+      factor( 
+        ordered = T,
+        levels = c(str_c("Condition ", c(0, 1, 6, 9, 10)), "background check", "filler")
+      )
+  ) %>% 
+  rename(correct_answer = correct)
+```
+
+## Ex 2.a Clean the data [3 points]
+
+<!-- one point for first, two for second cleaning task -->
+
+Just like in the web-book we are going to clean the data by performing the following two steps in sequence:
+
+1. Remove all data from any participant who got more than 50% of the answer to filler material wrong.
+2. Remove individual main trials if the corresponding "background check" question was answered wrongly.
+
+Use code from the web-book at will, but be mindful that you may have to make (minor) changes (e.g., variable naming).
+
+Use R code to report how many participants (in Step 1) and trials (in step 2) are excluded.
+
+**Solution:**
+
+```{r}
+subject_error_rate <- IDA_data_KoF %>% 
+  filter(type == "filler") %>% 
+  group_by(submission_id) %>% 
+  summarise(
+    proportion_correct = mean(correct_answer == response),
+    outlier_subject = proportion_correct < 0.5
+  ) %>% 
+  arrange(proportion_correct)
+```
+Nobody had an error rate below 0.5, so that no participant's data needs to be excluded completely.
+
+
+```{r}
+IDA_data_KoF <- 
+  IDA_data_KoF %>% 
+  # select only the 'background question' trials
+  filter(type == "special") %>% 
+  # is the background question answered correctly?
+  mutate(
+    background_correct = correct_answer == response
+  ) %>%
+  # select only the relevant columns
+  select(submission_id, vignette, background_correct) %>%
+  # right join lines to original data set 
+  right_join(IDA_data_KoF, by = c("submission_id", "vignette")) 
+
+# show numbers of true/false background checks
+(IDA_data_KoF %>% pull(background_correct) %>% table())
+
+# remove all special trials, as well as main trials with incorrect background check
+IDA_data_KoF <- 
+  IDA_data_KoF %>% 
+  filter(type == "main" & background_correct == TRUE)
+```
+
+
+## Ex 2.b Plot the data [2 points]
+
+Plot the data just like in the the first part of the web-book's appendix [D3.4](https://michael-franke.github.io/intro-data-analysis/app-93-data-sets-king-of-france.html#exploration-summary-stats-plots-1) (proportion per condition). 
+Use the web-book code as much as you like while making any necessary amendments.
+
+```{r}
+IDA_data_KoF %>% 
+  # drop unused factor levels
+  droplevels() %>% 
+  # get means and 95% bootstrapped CIs for each condition
+  group_by(condition) %>%
+  nest() %>% 
+  summarise(
+    CIs = map(data, function(d) bootstrapped_CI(d$response == "TRUE"))
+  ) %>% 
+  unnest(CIs) %>% 
+  # plot means and CIs
+  ggplot(aes(x = condition, y = mean, fill = condition)) + 
+  geom_bar(stat = "identity") +
+  geom_errorbar(aes(ymin = lower, ymax = upper, width = 0.2)) +
+  ylim(0,1) +
+  ylab("") + xlab("") + ggtitle("Proportion of 'TRUE' responses per condition") +
+  theme(legend.position = "none") +
+  scale_fill_manual(values = project_colors)
+```
+
+## Ex 2.c Run logistic regression model [5 points]
+
+<!-- one point for correct function call; one point for each of the four specific points stated below -->
+
+Run a logistic regression model on the cleaned data, predicting `response` in terms of categorical factor `condition`.
+Make sure to also do the following:
+
+- make the ordered factor `condition` a character vector before running the regression model
+- change the non-informative default priors for all slope coefficients to a Student's t distribution with 1 degree of freedom, a mean of 0 and a standard deviation of 2 (see web-book Chapter 13.4)
+- set the flap `sample_prior = 'yes'` to also sample from the prior
+- take 20,000 samples (using parameter `iter` in the function call of `brm`)
+
+Finally, also add a call of `summary(...)` to show the summary of the fitted model in the Rmarkdown output.
+
+**Solution:**
+
+```{r, results = 'hide'}
+fit_brms_KoF <- brm(
+  # predict `response` in terms of `condition`
+  formula = response ~ condition,
+  # specify which data to use
+  data = IDA_data_KoF %>% mutate(condition = as.character(condition)),
+  # logistic regression
+  family = bernoulli(link = "logit"),
+  # weakly informative priors (slightly conservative)
+  #   for `class = 'b'` (i.e., all slopes)
+  prior = prior(student_t(1, 0, 2),  class = 'b'),
+  # also collect samples from the prior (for point-valued testing)
+  sample_prior = 'yes',
+  # take more than the usual samples (for numerical stability of testing)
+  iter = 20000
+)
+summary(fit_brms_KoF)
+```
+
+
+## Ex 2.d Test hypotheses [12 points]
+
+<!-- for each hypothesis: one point for correct function call; one for correct interpretation; two for correct formulation of conclusions -->
+
+Use the `brms::hypotheses` function to test the three hypotheses stated above.
+For each case interpret the results and formulate a conclusion such as "does/does not provide evidence" or "accept/reject hypothesis" according to the results.
+
+### Hypothesis 1: C0 > C1
+
+**Solution:**
+
+```{r}
+brms::hypothesis(fit_brms_KoF, "conditionCondition1 < 0")
+```
+
+> Model and data provide no substantial evidence in favor of this hypothesis. 
+> The critical value of 0 is clearly (and with a reasonably wide ROPE) fully included in the credible interval.
+> The evidence ratio is only about 3, suggesting that there is a very mild indication that the disposition to answer "TRUE" in C1 might be slightly lower than in C0, but the data and model do not allow for a strong conclusion.
+
+### Hypothesis 2: C0 = C6
+
+**Solution:**
+
+```{r}
+brms::hypothesis(fit_brms_KoF, "conditionCondition6 = 0")
+```
+
+> Model and data provide very strong evidence for the idea that the disposition to answer "TRUE" is not equal in conditions C0 and C6, i.e., that H2 is false.
+> The evidence ratio in favor of H2 and posterior probability of H2 are (approximately) 0.
+
+
+### Hypothesis 3: C9 < C10
+
+**Solution:**
+
+```{r}
+brms::hypothesis(fit_brms_KoF, "conditionCondition9 < conditionCondition10")
+```
+
+> Data and model provide rather strong evidence for the belief that H3 is true.
+> The evidence ratio is about 300 and the posterior probability of H3 is (approximately) 1.
+
+## Ex 2.e Interaction with `gender` [6 points]
+
+<!-- 3 points for correctly interpreting main effect and formulating a conclusion about it -->
+<!-- similarly, 3 points for the interaction -->
+
+Let's get nasty!
+Let's do what no good scientist should ever do. (We do it for practice and for rubbing it in that this is NOT what you should EVER do.)
+
+Suppose we did not like the outcome of the test for H1 above.
+So we are going to run a new analysis (for which there is no *prima facie* rationale) just to see if we cannot possibly squeeze out something that looks like an argument for the conclusion that we so crave to be supported.
+Worst of all, we stipulate -completely out of the blue- a potential gender effect on the understanding of linguistic presupposition (say what?).
+
+Obviously, what this exercise is really after is getting practice with interpreting *interaction terms* for categorical regression.
+So, look at the code below, try to understand what it does and then inspect the summary of the model fit shown here.
+Then answer the following question: based on this analysis and results shown in the summary, is there any reason to believe that (i) there is a difference in the answer behavior between self-identified male and self-identified female participants (i.e., is there a main effect of `gender`?), and (ii) is there any specific way in which gender impacts on the disposition to select "TRUE" in either of the two conditions (i.e., is there an interaction?).
+Identify the source of your conclusion by pointing out which numbers (or whatever) you draw on in the summary of the model fit.
+
+```{r, results = 'hide'}
+IDA_data_KoF_interaction <- IDA_data_KoF %>% 
+  filter(condition %in% c("Condition 0", "Condition 1")) %>% 
+  filter(!is.na(gender)) %>% 
+  mutate(
+    gender = factor(gender)
+  ) %>% 
+  droplevels() %>% 
+  select(response, condition, gender)
+  
+# apply 'sum' contrasts
+contrasts(IDA_data_KoF_interaction$condition) <- contr.sum(2)
+contrasts(IDA_data_KoF_interaction$gender) <- contr.sum(2)
+
+# add intelligible name to the new contrast coding
+colnames(contrasts(IDA_data_KoF_interaction$condition)) <- ":Cond1"
+colnames(contrasts(IDA_data_KoF_interaction$gender)) <- ":male"
+
+fit_brms_KoF_interaction <- brm(
+  # predict `response` in terms of `condition`
+  formula = response ~ condition * gender,
+  # specify which data to use
+  data = IDA_data_KoF_interaction,
+  # logistic regression
+  family = bernoulli(link = "logit"),
+  # weakly informative priors (slightly conservative)
+  #   for `class = 'b'` (i.e., all slopes)
+  prior = prior(student_t(1, 0, 2),  class = 'b'),
+  # also collect samples from the prior (for point-valued testing)
+  sample_prior = 'yes',
+  # take more than the usual samples (for numerical stability of testing)
+  iter = 20000
+)
+```
+
+
+```{r}
+summary(fit_brms_KoF_interaction)
+```
+
+**Solution:**
+
+> There is no evidence for a main effect of `gender`: the coefficient `gender:male` has a 95% inner-quantile range that clearly covers positive and negative values.
+> There is also no interaction: the coefficient `condition:Cond1:gender:male` has a 95% inner-quantile range that clearly covers positive and negative values.
+> As a result, including the factor `gender` into the analysis changes ~~a flying bugu~~ nothing about the conclusions we drew earlier concerning H1.

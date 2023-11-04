@@ -1,0 +1,71 @@
+---
+title: "Tutorial 3 - Sum Stats & Plots"
+author: "Polina Tsvilodub"
+date: "11/12/2020"
+output: html_document
+---
+
+# Recap 
+
+### Experimental Design & Summary Stats
+Consider the snippet of an experimental dataset below. 
+
+```{r, eval=F}
+submission_id   trial   context   picture   RT    response
+1001              1    newspaper  cartoon   543      1
+1001              2    newspaper  photo     613      3
+1002              1    magazine   cartoon   752      7 
+1002              2    magazine   photo     801      5
+1003              1    magazine   cartoon   493      2
+1003              2    magazine   photo     583      6
+1004              1    newspaper  cartoon   711      2 
+1005              2    newspaper  photo     600      5
+```
+
+- What kind of design might this experiment have? 
+- What are the independent / dependent variables (most likely)? 
+- How would you check how many observations there are in the dataset? per participant? per participant in each condition?
+- How would you check what variables were recorded, assuming the data is in tidy format?
+- How would you check how many distinct values the feature `picture` has?
+
+- Which central trend measures do you know? What are the differences between those measures?  Which measures would be appropriate for investigating the variables `RT` and `response`? 
+
+- `summary()` is a very useful generic function to gain a coarse overview of a dataset 
+
+### Interpreting summary stats
+
+- What does a correlation of 1 (or -1) between the two variables `height` and `weight` from an imaginary dataset tell you?
+- Imagine we have a distribution of RTs observed in an experiment. What would the 42nd quantile of that distribution tell us?
+
+
+### Plotting 
+
+- What are the minimal necessary steps to create a plot in `ggplot`?
+- What kind of geoms does `ggplot2` provide?
+- What is set within the `aes()` call?
+- How can you create several plots next to each other? 
+- How to customize: Your plot title? Axes names? Scaling of the axes? 
+
+#### Useful tricks
+- You can save a plot with `ggsave(myplot, "myFolder/images/myPlot.png", width = 8, height = 8)`
+- You can control how your plot will appear in the knitted document by setting the parameters `fig.width` and/or `fig.height` in the header of the .Rmd code chunk. 
+
+# Extras [OPTIONAL]
+
+### Bootstrapping
+
+If you are interested in bootstrapping (which is really NOT a central part of this week's content), there is a very useful package for bootstrapping in a manner compatible with the `tidyverse` family. This package is called `tidyboot` (check out the short documentation [here](https://www.rdocumentation.org/packages/tidyboot/versions/0.1.1)). 
+
+Let's apply functions from `tidyboot` in the example XXX from the web-book:
+
+```{r, warnings=F, message=F}
+# load libraries
+library(tidyverse)
+library(tidyboot)
+
+# get dataset 
+avocado_data <- read_csv(url('https://raw.githubusercontent.com/michael-franke/intro-data-analysis/master/data_sets/avocado-processed.csv'))
+
+# compute bootstrapped mean and (by default) 95%-CI
+tidyboot_mean(avocado_data, column = average_price)
+```

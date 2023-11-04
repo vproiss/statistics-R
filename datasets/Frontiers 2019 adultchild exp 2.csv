@@ -1,0 +1,1473 @@
+﻿subject.exp,gender,age,list,property.type,exception.type,condition,item.no,statement,response
+1,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+1,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+1,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+1,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+1,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+1,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+1,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+1,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+2,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+2,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+3,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+3,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+3,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+3,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+3,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+3,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+3,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+3,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+4,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+4,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+4,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+4,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+4,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+4,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+4,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+4,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+5,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+5,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+6,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+6,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+6,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+6,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+6,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+6,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+6,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+6,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+7,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+7,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+7,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+7,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+7,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+7,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+7,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+7,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+8,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+8,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,0
+8,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+8,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+8,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+8,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+8,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+8,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+9,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+9,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+9,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+9,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+9,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+9,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+9,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+9,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+10,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+10,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+11,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+11,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+12,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+12,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+12,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+12,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+12,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+12,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+12,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+12,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+13,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+13,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+13,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+13,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+13,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+13,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+13,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+13,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+14,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+14,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+14,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+14,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+14,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+14,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+14,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+14,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+15,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+15,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,0
+15,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+15,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+15,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+15,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+15,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+15,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+16,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+16,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+17,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+17,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+17,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+17,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+17,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+17,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+17,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+17,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+18,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+18,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,0
+18,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+18,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+18,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+18,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+18,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+18,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+19,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+19,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+20,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+20,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+20,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+20,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+20,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+20,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+20,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+20,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+21,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+21,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,0
+21,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+21,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+21,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+21,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+21,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+21,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+22,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+22,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+23,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+23,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+24,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+24,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+24,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+24,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+24,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+24,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+24,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+24,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+25,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+25,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+25,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+25,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+25,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+25,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+25,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+25,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+26,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+26,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+26,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+26,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+26,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+26,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+26,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+26,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+27,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+27,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+27,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+27,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+27,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+27,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+27,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+27,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+28,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+28,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+29,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+29,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+29,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+29,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+29,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+29,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+29,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+29,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+30,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+30,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+30,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+30,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+30,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+30,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+30,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+30,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+31,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+32,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+32,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,0
+32,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+32,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+32,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+32,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+32,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+32,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+34,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+35,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+35,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+36,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+36,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,0
+36,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+36,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+36,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+36,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+36,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+36,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+37,male,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+37,male,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+37,male,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+37,male,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+37,male,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+37,male,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,1
+37,male,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+37,male,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+38,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+38,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+38,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+38,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+38,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+38,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+38,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+38,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+39,female,adult,list 1,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+39,female,adult,list 1,neutral,minimal,neutralminimal,2,Borps love to talk to their mothers.,1
+39,female,adult,list 1,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+39,female,adult,list 1,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+39,female,adult,list 1,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+39,female,adult,list 1,neutral,minimal,neutralminimal,6,Scobbits love to make new games.,0
+39,female,adult,list 1,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+39,female,adult,list 1,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,
+41,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+41,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+41,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+41,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+41,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+41,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+41,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+41,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+42,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+42,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+42,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+42,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+42,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+42,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+42,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+42,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+43,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+43,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+43,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+43,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+43,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+43,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+43,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+43,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+44,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+44,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+44,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+44,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+44,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+44,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+44,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+44,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+45,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+45,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+45,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+45,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+45,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+45,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+45,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+45,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+46,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+46,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+46,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+46,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+46,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+46,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+46,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+46,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+47,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+47,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+48,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+49,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+50,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+50,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+50,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+50,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+50,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+50,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+50,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+50,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+51,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+51,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+51,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+51,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+51,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+51,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+51,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+51,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+52,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+52,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+52,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+52,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+52,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+52,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+52,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+52,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+53,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+53,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+54,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+54,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+54,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+54,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+54,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+54,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+54,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+54,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+55,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+55,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+55,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+55,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+55,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+55,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+55,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+55,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+56,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+56,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+56,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+56,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+56,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+56,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+56,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+56,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+57,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+57,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+57,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+57,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+57,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+57,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+57,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+57,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+58,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+58,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+58,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+58,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+58,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+58,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+58,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+58,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+59,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+59,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+59,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+59,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+59,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+59,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+59,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+59,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+60,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+60,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+60,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+60,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+60,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+60,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+60,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+60,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+61,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+61,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+61,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+61,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+61,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+61,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+61,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+61,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+62,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+62,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+62,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+62,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+62,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+62,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+62,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+62,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+63,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+63,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+63,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+63,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+63,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+63,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+63,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+63,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+65,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+65,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+65,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+65,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+65,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+65,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+65,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+65,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+66,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+66,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+66,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+66,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+66,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+66,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+66,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+66,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+67,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+67,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+67,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+67,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+67,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+67,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+67,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+67,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+68,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+68,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+68,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+68,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+68,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+68,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+68,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+68,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+69,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+69,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+69,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+69,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+69,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+69,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+69,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+69,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+70,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+70,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+70,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+70,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+70,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+70,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+70,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+70,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+71,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+71,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+71,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+71,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+71,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+71,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+71,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+71,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+72,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+73,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+73,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,0
+73,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+73,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+73,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+73,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+73,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+73,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+74,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+74,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+74,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+74,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+74,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+74,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+74,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+74,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+75,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+75,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+75,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+75,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+75,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+75,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+75,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+75,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+76,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+76,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+76,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+76,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+76,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+76,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+76,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+76,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+78,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+78,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+78,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+78,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+78,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+78,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+78,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+78,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+79,female,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+79,female,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+79,female,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+79,female,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+79,female,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+79,female,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,0
+79,female,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+79,female,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,2,Borps love to scare their mothers.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,6,Scobbits love to make new games.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+80,male,adult,list 2,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+83,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+83,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+83,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+83,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+83,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+83,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+83,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+83,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+84,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+84,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+84,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+84,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+84,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+84,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+84,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+84,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+85,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+86,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+86,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+86,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+86,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+86,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+86,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+86,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+86,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+87,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+88,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+88,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+89,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+89,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+89,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+89,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+89,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+89,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+89,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+89,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+90,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+90,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+90,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+90,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+90,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+90,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+90,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+90,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+91,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+91,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+91,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+91,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+91,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+91,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+91,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+91,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+92,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+92,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+92,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+92,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+92,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+92,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+92,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+92,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+93,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+93,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+94,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+94,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+94,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+94,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+94,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+94,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+94,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+94,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+95,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+95,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+95,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+95,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+95,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+95,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+95,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+95,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+96,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+96,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+96,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+96,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+96,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+96,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+96,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+96,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+97,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+97,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+97,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+97,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+97,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+97,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+97,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+97,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+98,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+98,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+98,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+98,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+98,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+98,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+98,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+98,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+99,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+99,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+99,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+99,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+99,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+99,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+99,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+99,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+100,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+100,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+100,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+100,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+100,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+100,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+100,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+100,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+101,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+101,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+101,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+101,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+101,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+101,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+101,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+101,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+102,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+102,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+102,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+102,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+102,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+102,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+102,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+102,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+103,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+103,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+103,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+103,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+103,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+103,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+103,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+103,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+104,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+104,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+104,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+104,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+104,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+104,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+104,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+104,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+105,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+105,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+105,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+105,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+105,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+105,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+105,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+105,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+106,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+106,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+106,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+106,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+106,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+106,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+106,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+106,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+107,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+107,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+108,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+108,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+108,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+108,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+108,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+108,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+108,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+108,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+109,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+109,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+110,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+110,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+110,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+110,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+110,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+110,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+110,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+110,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+111,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+111,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+111,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+111,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+111,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+111,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+111,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+111,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+112,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+112,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+112,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+112,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+112,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+112,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+112,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+112,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+113,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+113,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+113,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+113,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+113,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+113,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+113,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+113,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+114,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+114,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+114,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+114,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+114,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+114,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+114,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+114,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+115,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+115,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+115,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+115,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+115,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+115,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+115,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+115,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+116,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+116,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+116,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+116,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+116,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+116,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+116,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+116,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+117,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+117,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+117,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+117,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+117,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+117,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+117,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+117,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+118,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+118,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+118,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+118,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+118,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+118,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+118,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+118,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+119,female,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+119,female,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+119,female,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+119,female,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+119,female,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+119,female,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+119,female,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+119,female,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+120,male,adult,list 3,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+120,male,adult,list 3,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+120,male,adult,list 3,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+120,male,adult,list 3,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+120,male,adult,list 3,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+120,male,adult,list 3,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+120,male,adult,list 3,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+120,male,adult,list 3,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+125,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+125,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+125,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+125,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+125,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+125,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+125,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+125,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+126,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+126,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+126,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+126,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+126,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+126,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+126,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+126,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+127,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+127,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+127,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+127,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+127,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+127,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+127,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+127,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+128,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+128,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+128,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+128,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+128,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+128,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+128,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+128,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+129,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+129,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+129,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+129,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+129,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+129,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+129,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+129,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+130,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+130,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+130,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+130,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+130,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+130,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+130,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+130,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+131,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+131,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+131,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+131,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+131,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+131,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+131,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+131,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+132,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+132,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+132,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+132,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+132,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+132,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+132,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+132,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+133,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+133,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+133,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+133,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+133,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+133,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+133,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+133,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+134,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+134,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+134,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+134,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+134,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+134,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+134,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+134,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+135,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+135,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+136,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+136,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+136,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+136,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+136,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+136,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+136,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+136,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+137,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+137,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+137,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+137,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+137,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+137,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+137,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+137,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+138,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+138,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+138,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+138,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+138,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+138,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+138,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+138,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+139,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+139,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+139,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+139,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+139,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+139,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+139,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+139,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+140,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+140,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+140,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+140,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+140,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+140,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+140,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+140,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+141,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+141,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+141,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+141,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+141,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+141,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+141,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+141,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+142,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+142,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+142,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+142,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+142,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+142,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+142,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+142,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+143,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+143,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+144,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+144,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+144,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+144,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+144,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+144,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+144,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+144,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+145,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+145,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+145,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+145,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+145,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+145,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+145,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+145,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+146,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+146,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+146,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+146,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+146,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+146,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+146,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+146,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+147,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+147,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+147,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+147,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+147,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+147,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+147,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+147,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+148,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+148,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+149,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+149,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+150,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+150,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+151,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+151,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+151,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+151,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+151,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+151,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+151,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+151,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+152,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+152,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+152,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+152,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+152,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+152,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+152,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+152,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+153,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+153,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+154,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+155,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+155,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+155,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+155,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+155,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+155,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+155,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+155,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+156,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+156,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+156,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+156,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+156,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+156,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+156,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+156,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+157,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+157,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+157,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+157,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+157,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+157,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+157,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+157,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+158,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+158,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+159,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+159,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+160,female,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+160,female,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+160,female,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+160,female,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+160,female,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+160,female,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+160,female,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+160,female,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+161,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+161,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+161,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+161,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+161,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+161,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+161,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+161,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+162,male,adult,list 4,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+162,male,adult,list 4,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+162,male,adult,list 4,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+162,male,adult,list 4,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+162,male,adult,list 4,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+162,male,adult,list 4,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+162,male,adult,list 4,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+162,male,adult,list 4,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+163,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+163,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+164,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+164,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+164,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+164,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+164,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+164,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+164,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+164,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+165,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+166,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+166,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+167,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+167,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+167,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,1
+167,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+167,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,1
+167,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+167,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+167,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+168,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+168,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,1
+168,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+168,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+168,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+168,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+168,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+168,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,0
+169,male,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,0
+170,female,child,1 GEN,striking,minimal,strikingminimal,1,Ackles love to play with fire.,0
+170,female,child,1 GEN,striking,minimal,strikingminimal,2,Borps love to scare their mothers.,0
+170,female,child,1 GEN,striking,minimal,strikingminimal,3,Glippets love to smash through walls.,0
+170,female,child,1 GEN,striking,minimal,strikingminimal,4,Murbs love to shout their names.,1
+170,female,child,1 GEN,striking,minimal,strikingminimal,5,Pagons love to feel afraid.,0
+170,female,child,1 GEN,striking,minimal,strikingminimal,6,Scobbits love to cheat at games.,1
+170,female,child,1 GEN,striking,minimal,strikingminimal,7,Vardies love to play with snakes.,1
+170,female,child,1 GEN,striking,minimal,strikingminimal,8,Zorbs love to make people angry.,1
+171,female,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+171,female,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+172,female,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,1
+173,female,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+173,female,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+174,male,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+174,male,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+174,male,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+174,male,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,1
+174,male,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+174,male,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+174,male,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+174,male,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+175,male,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+176,male,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+176,male,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+176,male,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+176,male,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+176,male,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+176,male,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+176,male,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+176,male,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+177,male,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,0
+177,male,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,1
+177,male,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,0
+177,male,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+177,male,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,0
+177,male,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+177,male,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,1
+177,male,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,0
+178,female,child,3 GEN,striking,maximal,strikingmaximal,1,Ackles love to play with fire.,1
+178,female,child,3 GEN,striking,maximal,strikingmaximal,2,Borps love to scare their mothers.,0
+178,female,child,3 GEN,striking,maximal,strikingmaximal,3,Glippets love to smash through walls.,1
+178,female,child,3 GEN,striking,maximal,strikingmaximal,4,Murbs love to shout their names.,0
+178,female,child,3 GEN,striking,maximal,strikingmaximal,5,Pagons love to feel afraid.,1
+178,female,child,3 GEN,striking,maximal,strikingmaximal,6,Scobbits love to cheat at games.,0
+178,female,child,3 GEN,striking,maximal,strikingmaximal,7,Vardies love to play with snakes.,0
+178,female,child,3 GEN,striking,maximal,strikingmaximal,8,Zorbs love to make people angry.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+179,male,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+180,male,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+180,male,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,0
+181,female,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+181,female,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,1
+181,female,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+181,female,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+181,female,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+181,female,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,1
+181,female,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+181,female,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+182,female,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+182,female,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,0
+183,female,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+183,female,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+184,male,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,0
+184,male,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,1
+184,male,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+184,male,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+184,male,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+184,male,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,1
+184,male,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+184,male,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+185,male,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+185,male,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,1
+185,male,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+185,male,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,0
+185,male,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+185,male,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,1
+185,male,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,0
+185,male,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,1,Ackles love to play with toys.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,2,Borps love talk to their mothers.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,3,Glippets love to run through parks.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,4,Murbs love to draw their names.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,5,Pagons love to feel safe.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,6,Scobbits love to make new  games.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,7,Vardies love to play with cats.,1
+186,male,child,5 GEN,neutral,minimal,neutralminimal,8,Zorbs love to make people sing.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+187,female,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+188,female,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,1
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,0
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,1
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+189,female,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,0
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+190,male,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,0
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,0
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+191,male,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,0
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,0
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,1
+192,female,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,1
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,1
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,1
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,0
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+193,male,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,0
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,1,Ackles love to play with toys.,0
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,2,Borps love talk to their mothers.,1
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,3,Glippets love to run through parks.,1
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,4,Murbs love to draw their names.,0
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,5,Pagons love to feel safe.,1
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,6,Scobbits love to make new  games.,1
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,7,Vardies love to play with cats.,0
+194,male,child,7 GEN,neutral,maximal,neutralmaximal,8,Zorbs love to make people sing.,1

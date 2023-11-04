@@ -1,0 +1,262 @@
+---
+title: "Tutrorial R Basics"
+author: ''
+date: "nov9-2022"
+output:
+  html_document:
+    toc: yes
+    toc_depth: 3
+    toc_float: yes
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+
+# To set global options that apply to every chunk in your file
+knitr::opts_chunk$set(echo = T, error = F, message = F, warning = F)
+
+```
+
+```{r libraries, include=F, message=T}
+
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library(tidyverse)
+
+```
+
+# <span style = "color:firebrick">extra</span>
+
+**Set the theme for RStudio**  Tools → Global options → Appearance
+
+**html reference** [referenfe for html](https://bookdown.org/yihui/rmarkdown/html-document.html)
+
+**chunk options** [R chunk options](https://rmarkdown.rstudio.com/lesson-3.html)
+
+```{r, warning=T}
+# This Chunk is to understand what is 'warning' and how to mask it in the html knitted file
+# change the value of 'warning' option in this chunk to see the effect
+
+# define character vector
+x <- c('1', '2', '3', NA, '4', 'Hey')
+
+# convert to numeric vector
+x_num <- as.numeric(x)
+x_num
+```
+
+**Rstudio keyboard shortcuts:** Tool → Keyboard Shortcuts help → see all shortcuts 
+
+- Insert chunk:	Ctrl+Alt+I(win) Command+Option+I(mac)
+- Insert assignment operator: 	Alt+-(win) Option+-(mac)
+- Comment/uncomment current selection: 	Ctrl+Shift+C(win) 	Command+Shift+C(mac)
+- Insert pipe operator: Ctrl+Shift+M(win) 	Command+Shift+M(mac)
+
+
+# <span style = "color:firebrick">Exercise 1:</span> matrix
+
+Create this matrix:
+
+```{r, eval = F}
+
+1  3
+5  3
+9  3
+
+```
+
+**Solution 1**
+
+create an empty matrix and fill it one by one! 
+```{r}
+e_matrix <- matrix( , nrow=3, ncol=2)
+e_matrix
+
+
+e_matrix[1,] <- c(1,3) # indexing, first row 
+e_matrix
+
+```
+
+**Solution 2**
+
+create a vector and turn it into matrix 
+```{r}
+v_1 <- c(seq(from = 1, to = 9, by = 4))
+v_2 <- c(rep(3,3))
+
+m_1 <- matrix(data = c(v_1,v_2), ncol = 2, byrow = FALSE)
+m_1
+
+```
+
+```{r}
+v_3 <- c(1,3,5,3,9,3)
+matrix(v_3, ncol = 2, byrow = TRUE)
+```
+```{r}
+v_4 <- c(1,5,9,3,3,3)
+matrix(v_4, ncol = 2, byrow = FALSE)
+```
+
+**solution 3**
+
+creat the vector and bind them together using 'cbind'
+```{r}
+# one to bind them 
+m_2 <-  cbind(v_1,v_2)
+m_2
+
+```
+
+**another solution + Error**
+
+```{r}
+e_matrix <- matrix( , nrow=3, ncol=2)
+mat1.data <- c(seq(from = 1, to = 12, by = 4))
+mat2.data <- c(rep((3),3))
+
+# ERROR / Change nrow to 5
+# make sense of the error and why the result is this way when nrow=6
+e_matrix <- matrix(nrow=6, ncol=2) 
+e_matrix[,1] <- mat1.data
+e_matrix[,2] <- mat2.data
+e_matrix
+```
+
+**solution 4**
+
+```{r}
+# dim function
+mat_1 <- c(1,5,9,3,3,3) 
+dim(mat_1) <- c(3,2)
+mat_1
+```
+
+# <span style = "color:firebrick">Exercise 2:</span> df & tibble
+There are few difference between dataframe and tibble. This difference is also valid for read.csv() and read_csv(). First one load the csv file as 'dataframe', the second one as 'tibble'.
+
+few difference are as follows:
+
+* printing (see below)
+* access to partial provided columns (see below)
+* Tibble load faster
+
+other differences could be found in the links below:
+
+[Tibble vs. DataFrame](https://jtr13.github.io/cc21fall1/tibble-vs.-dataframe.html)
+
+There are many data sets available in base r 
+
+```{r}
+# list of datasets 
+
+# data()
+# library(help = "datasets")
+ls("package:datasets") # list the datasets
+```
+
+```{r}
+# dataframe
+iris_df <- iris
+
+# tibble
+iris_tib <- as_tibble(iris)
+
+```
+
+```{r}
+# 1.prining (dataframe prints the whole dataset but tibble only prints the top10)
+iris_df
+iris_tib
+```
+
+```{r}
+# 2 partial col name is acceptable as long as it is unique in dataframe but tibble....
+iris_df$Petal.Len
+iris_tib$Petal.Leng
+```
+
+```{r}
+# different ways of slicing the tibble/dataframe are the same,
+# you may see the different syntax below
+
+# iris_tib$Petal.Length
+# iris_tib[3]
+iris_tib["Petal.Length"] 
+
+```
+
+
+# <span style = "color:firebrick">Exercise 3:</span> functions & piping 
+```{r}
+# defining function
+add_five <- function(x){
+  x + 5
+}
+
+# anonymous function
+sapply(1:20, function(i) i + 5)
+
+# using the defined function
+sapply(1:20, add_five)
+
+# usage of anonymous function within another function
+purrr::map_dbl(1:20, ~.x + 5)
+purrr::map_int(1:20, ~.x + 5L) # L indicates the number's type to be integer 
+
+```
+
+**another example of using anonymous function**
+```{r}
+x <- sample(1:6, 12, replace=TRUE)
+x
+mat <- matrix(x, nrow=3)
+mat
+apply(mat, 1, function(x) { seq(min(x), max(x)) })
+```
+
+Flavors of piping:
+
+There are two flavors of piping that you will be seeing in this course:
+
+- The magrittr package infix operator %>% and 
+- Base R native pipe operator |> in version 4.1.0
+
+To change to Base R pipe keyboard shortcut:
+Tools → Global Options → code → use native pipe
+
+```{r}
+# Piping and function
+1:20 %>% 
+  (function(i) {i + 5})
+
+1:20 |>
+  (function(i){i + 5})()
+```
+
+
+# difference between ( and [ 
+
+```{r}
+# vector
+x1<-5:12
+# length of the vector
+length(x1[x1>5]) 
+
+# taking out the inside paranthesis piece by piece 
+x1>5 
+x1[x1>5] 
+```
+
+# random example (what is arr.ind argument)
+```{r}
+# create a matrix
+m <- matrix(1:12, 3, 4)
+# rownames(m) <- paste("Case", 1:3, sep = "_")
+m
+which(m %% 5 == 0, arr.ind = TRUE)
+which(m %% 5 == 0, arr.ind = FALSE)
+```
+
+
+

@@ -1,0 +1,449 @@
+---
+title: "Final take-home exam"
+date: 'Due: Wednesday, February 10 by 08:00 pm CET'
+author: ""
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, error = F, message = F, warning = F)
+
+```
+
+```{r libraries, include=FALSE, message=FALSE, warning=FALSE}
+
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library(tidyverse)
+
+# package for this course
+library(aida)
+
+# package for Bayesian regression
+library(brms)
+
+# parallel execution of Stan code
+options(mc.cores = parallel::detectCores())
+
+# use the aida-theme for plotting
+theme_set(theme_aida())
+
+# global color scheme / non-optimized
+project_colors = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000")
+
+# setting theme colors globally
+scale_colour_discrete <- function(...) {
+  scale_colour_manual(..., values = project_colors)
+}
+scale_fill_discrete <- function(...) {
+   scale_fill_manual(..., values = project_colors)
+} 
+
+# nicer global knitr options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+                      cache = TRUE, fig.align = 'center')
+```
+
+# Instructions
+
+* Create an Rmd-file with your group number (equivalent to StudIP group) in the 'author' heading and answer the following questions.
+* When all answers are ready, 'Knit' the document to produce a HTML file.
+* Create a ZIP archive called "IDA-final-Group-XYZ.zip" (where 'XYZ' is *your* group number) containing:
+   * an R Markdown file "IDA-final-Group-XYZ.Rmd"
+   * a knitted HTML document "IDA-final-Group-XYZ.html"
+   * any other files necessary to compile your Rmarkdown to HTML (data, pictures etc.)
+* Upload the ZIP archive on Stud.IP in your group folder before the deadline (see above). You may upload as many times as you like before the deadline, only your final submission will count.
+* If you run `brms::brm` in an R code chunk, make sure to include `results='hide'` as an option to that code chunk to suppress the output of Stan.
+* If you have questions, pose them on StudIP in the new section for questions on the exam. Obviously, do **not** post solutions. 
+
+# <span style = "color:firebrick">Exercise 1:</span> Identify hypotheses & relevant measures [8 points]
+
+Read the paper by Brashears & Minda (2020) carefully.
+(Authors/paper henceforth referred to as B&M.)
+The focus for us is on the sections "Methods" and "Results".
+
+## Ex 1.a Identify the research hypotheses [4 points]
+
+<!-- 2 points for each hypothesis of which 1 point for correctly identifying the variables in the data set -->
+
+B&M address three main research hypotheses, and they conduct three main statistical analyses, one for each of three relevant research hypotheses.
+We will refer to these research hypotheses here as "Learning Speed", "Accuracy" and "Strategy".
+
+Here's a formulation of the "Strategy" hypothesis:
+
+> "Strategy": The proportion of categorization choices for each subject, which are indicative of a 'critical attribute' categorization strategy (as stored in variable `CA` and derived from choices in the critical trials `T1` ... `T10`), is larger for the "easily verbalizable" condition (level `VB` of variable `Cond`), than in the "not-easily verbalizable" condition (level `NB` of variable `Cond`).
+
+Formulate the remaining two hypotheses in natural language as precisely as possible, using -wherever possible- reference to the names and/or values of variables in the data set supplied by B&M, following the above example.
+(That is, if some hypothesis relates to a dependent or independent variable, then add the information of where in the data set this variable is stored, and/or which values of it you are referring to precisely.)
+
+**Solution:**
+
+> "Learning Speed": The number of trials, stored in variable `Trials`, needed before training counts as successful (by the criteria given in the paper) is lower in the "easily verbalizable" condition (VB), than in the "not-easily verbalizable" condition (column `Cond`).
+
+> "Accuracy": The accuracy for test trials TA1 ... TA5 and TB1 ... TB5, stored in variable `Accuracy`, is higher in the "easily verbalizable" condition (VB), than in the "not-easily verbalizable" condition (column `Cond`).
+
+## Ex 1.b Previous results [3 points]
+
+<!-- one point per hypothesis -->
+
+What results do B&M report for these three hypotheses?
+Make a short statement for each hypothesis, e.g., "find evidence for/against" or "find no evidence", for each hypothesis.
+(Don't overthink this! The question is about what the authors conclude from their analyses. No need to go down the rabbit hole here and triple-check whether you would draw similar conclusions from the reported analyses.)
+
+**Solution:**
+
+> B&M find no evidence for the "Learning Speed" hypothesis, but do find evidence in support of the other two hypotheses.
+
+## Ex 1.c Kind of experiment [1 point]
+
+<!-- 1 point if fully correct -->
+
+What kind of experiment is this? I.e., which independent (explanatory) variables are there? Are they metric or categorical factors? If factors, how many levels (ordered, unordered?) do they have? Any within- or between-subjects manipulations?
+
+**Solution:**
+
+This is a one-factor design. The factor has two unordered levels, implemented as a between-subjects manipulation.
+
+# <span style = "color:firebrick">Exercise 2:</span> Inspect the data [12 points]
+
+We load the data:
+
+```{r}
+d <- read_csv('BM_data.csv')
+```
+
+## Ex 2.a Get some counts [2 points]
+
+<!-- one point for each -->
+
+Use R to retrieve:
+
+- the number of participants contained in the data set
+- the number of times each condition (NV and VB) occurs in the data
+
+**Solution:**
+
+```{r}
+# number of subjects in data set
+d$Subj %>% unique() %>% length()
+```
+
+```{r}
+# number of times each condition occurs
+d %>% count(Cond)
+```
+
+## Ex 2.b Tidy up Part 1 [2 points]
+
+<!-- 0.5 points for excluding T11-T20 -->
+<!-- 1.5 points for correct pivoting -->
+
+In some of our subsequent analyses, we will be interested in the categorization decision of each subject for each critical experimental trial.
+For this purpose, the data in `d` is not tidy.
+Use common `dplyr` functions to create a new variable `d_tidy` which contains the same data as `d` (except for data from T11-T20) in a tidy format.
+So, `d_tidy` will include one row for each individual categorization trial of each subject.
+Since we will not be analyzing the "single-feature trials" (T11-T20), exclude these.
+Name the two new columns you will create by pivoting `trial_label` and `response`.
+Include the first 10 lines of your `d_tidy` to the HTML output. 
+
+**Solution:**
+
+```{r}
+d_tidy <- d %>% 
+  # discard single feature trials 
+  select(- (T11:T20)) %>% 
+  pivot_longer(
+    cols = TA1:T10,
+    names_to = "trial_label",
+    values_to = "response"
+  )
+d_tidy
+```
+
+## Ex 2.c Tidy up Part 2 [2 points]
+
+<!-- 1 point per column -->
+
+The tibble in `d_tidy` now contains a data column with entries like `TA1` or `T10`, but actually `TA1` and `T10` are quite different types of trials.
+So, let's clean up and structure some more.
+Introduce a new column called `trial_type`, which contains the information whether each row's trial is from one of the four categories: `category_A`, `category_B`, `exception_1`, or `exception_2`.
+The trials of types `exception_1` and `exception_2` differ with respect to the expected response under the "characteristic attribute" (CA) strategy.
+Trials of type `exception_1` expect response "B" under CA.
+Add also a column called `expected_repsonse` containing the expected responses for each trial type (assuming strategy CA, where that is relevant).
+
+**Solution**:
+
+```{r}
+d_tidy <- d_tidy %>% 
+  mutate(
+    trial_type = case_when(
+      trial_label %in% str_c("TA", 1:5) ~ "category_A",
+      trial_label %in% str_c("TB", 1:5) ~ "category_B",
+      trial_label %in% str_c("T", 1:5) ~ "exception_1",
+      trial_label %in% str_c("T", 6:10) ~ "exception_2"
+    ),
+    expected_response = case_when(
+      trial_label %in% str_c("TA", 1:5) ~ "A",
+      trial_label %in% str_c("TB", 1:5) ~ "B",
+      trial_label %in% str_c("T", 1:5) ~ "B",
+      trial_label %in% str_c("T", 6:10) ~ "A"
+    )
+  )
+d_tidy
+```
+
+## Ex 2.d Double-check relevant summary stats by B&M [3 points]
+
+<!-- 1.5 points per check -->
+
+Checking other researchers' results is not imprudent, but part of a healthy self-correcting and cooperative scientific community.
+Therefore, add to the tibble in `d` columns `CA_check` and `Accuracy_check`, calculating these values yourself from the information stored in columns `trial_type` and `expected_response` of `d_tidy`.
+(NB: you may want to use some form of 'joining' tibbles, or you just produce two single vectors `CA_check` and `Accuracy_check`.)
+Finally, use R (e.g., functions like `all` or `any`) to check if your calculations agree the information provided in columns `CA` and `Accuracy` of `d`.
+
+**Solution:**
+
+```{r}
+# Accuracy
+d_Acc_check <- d_tidy %>% 
+  filter(! trial_type %in% c("exception_1", "exception_2")) %>% 
+  group_by(Subj) %>% 
+  summarize(Acc_check = mean(response == expected_response))
+d <- full_join(d, d_Acc_check, by = "Subj") 
+all(d$Accuracy == d$Acc_check)
+
+# Strategy information
+d_CA_check <- d_tidy %>% 
+  filter(trial_type %in% c("exception_1", "exception_2")) %>% 
+  group_by(Subj) %>% 
+  summarize(CA_check = mean(response == expected_response)) 
+d <- full_join(d, d_CA_check, by = "Subj")
+all(d$CA == d$CA_check)
+```
+
+## Ex 2.e Summary statistics [3 points]
+
+<!-- 1 point for `dplyr` functions -->
+<!-- 1 point for using `aida::bootstrapped_CI` -->
+<!-- 1 point for correct form of tibble -->
+
+Use common `dplyr` functions, as well as the function `aida::bootstrapped_CI` to produce a tibble with the exact form as shown below (including ordering of rows and columns, as well as column names!) showing the mean, the lower- and the upper-bound of the 95% bootstrapped confidence interval of the mean (as returned by `aida::bootstrapped_CI`) of the three relevant measures of interest. 
+
+```{r, echo = F}
+# your output should conform to this form-template
+tribble(
+  ~"measure", ~"Cond", ~"lower", ~"mean", ~"upper",
+  "Trials", "NV", "...", "...", "...",
+  "Trials", "VB", "...", "...", "...",
+  "Accuracy", "NV", "...", "...", "...",
+  "Accuracy", "VB", "...", "...", "...",
+  "CA", "NV", "...", "...", "...",
+  "CA", "VB", "...", "...", "..."
+)
+```
+
+**Solution:**
+
+```{r}
+d_tidy %>% 
+  select(Subj, Cond, Trials, Accuracy, CA) %>% 
+  unique() %>% 
+  pivot_longer(cols = c(Trials, Accuracy, CA), names_to = "measure") %>% 
+  group_by(measure, Cond) %>% 
+  summarize(
+    aida::bootstrapped_CI(value)
+  ) %>% 
+  ungroup() %>% 
+  mutate(measure = factor(measure, levels = c("Trials", "Accuracy", "CA")))  %>% 
+  arrange(measure)
+```
+
+# <span style = "color:firebrick">Exercise 3:</span> Vizualization [7 points]
+
+We will look at plots, one for each of the three main research hypotheses.
+For your own understanding, think about whether you can "see evidence" in favor of or against each hypothesis.
+(You do not have to comment on this in your submission.)
+
+## Ex 3.a Vizualize the "Learning Speed" data [3 points]
+
+<!-- 2 for correct plot; 1 for adjusting binwidth -->
+
+Visualize the data relevant for addressing the "Learning Speed" hypothesis.
+Use a histogram with the most fine-grained binning which is reasonable given the nature of the data (i.e., manipulate argument `binwidth` in function `geom_histogram`).
+Use two facets, one for each relevant level of the categorical predictor.
+
+**Solution:**
+
+```{r}
+d %>% 
+  ggplot(aes(x = Trials)) +
+  geom_histogram(binwidth = 1) +
+  facet_wrap(~ Cond)
+```
+
+## Ex 3.b Vizualize the "Accuracy" data [2 points]
+
+<!-- 2 for correct plot -->
+
+Make a histogram plot, using facets, for the data relevant to the "Accuracy" hypothesis.
+
+**Solution:**
+
+```{r}
+d %>% 
+  ggplot(aes(x = Accuracy)) +
+  geom_histogram() +
+  facet_grid(~Cond)
+```
+
+## Ex 3.c Vizualize the "Strategy" data [2 points]
+
+<!-- 2 for correct plot -->
+
+Plot the data for the "Strategy" hypothesis.
+You can use a histogram and facets here as well.
+
+**Solution:**
+
+```{r}
+d %>% 
+  ggplot(aes(x = CA)) +
+  geom_histogram() +
+  facet_grid(~Cond)
+```
+
+# <span style = "color:firebrick">Exercise 4:</span> Hypothesis testing [22 points]
+
+## Ex 4.a Testing the "Learning Speed" hypothesis [6 points]
+
+<!-- 2 points for running the model with correct data and formula -->
+<!-- 1 prior for correctly setting the prior -->
+<!-- (subtract 0.5 for failing to record the prior samples) -->
+<!-- 1 point for calling the hypothesis function correctly -->
+<!-- 2 points for correct interpretation -->
+
+Test the "Learning Speed" hypothesis using a Bayesian linear regression model, following the assumption made in the paper that the measures in `Trials` are normally distributed.
+Make sure to also record samples from the prior (even if we don't need them), and set the relevant prior for the slope term to a Student's $t$ distribution with 1 degree of freedom, mean 0 and standard deviation 100.
+Test the hypothesis with `brms::hypothesis` and interpret the outcome with explicit mentioning of the quantities you base your interpretation on.
+
+**Solution:**
+
+```{r, results = "hide"}
+fit_speed <- brms::brm(
+  formula = Trials ~ Cond,
+  data = d,
+  prior = prior(student_t(1, 0, 100), coef = CondVB),
+  sample_prior = 'yes'
+)
+```
+
+```{r}
+brms::hypothesis(fit_speed, "CondVB < 0")
+```
+
+> The evidence ratio in favor of the "Learning Speed" hypothesis is around 2.7, so this is only very mild (anecdotal) evidence in its favor. We should conclude that there is neither strong evidence in favor of, nor against the hypothesis that learning is slower in the not-easily verbalizable condition.
+
+## Ex 4.b Testing the "Accuracy" hypothesis [8 points]
+
+<!-- 2 points for analyzing the data as Bernoulli data -->
+<!-- 1 point for correctly identifying why Accuracy is not normally distributed -->
+<!-- 3 points for setting up the correct test -->
+<!-- 2 points for correct interpretation of results -->
+
+B&M test the "Accuracy" hypothesis based on the assumption that the measures in `Accuracy` are normally distributed. 
+If you can, explain in one concise sentence why this normality assumption might be criticized in the case at hand.
+If you cannot think of a different analysis you like better, follow this strategy to test the "Accuracy" hypothesis with a Bayesian regression model following the same general approach as in the previous exercise.
+If you can think of an analysis you might prefer, do that (for 2 extra points).
+Use the same priors as in the previous exercise.
+
+**Solution:**
+
+> The "Accuracy" scores are actually just means of correct responses, each of which is a binary (Bernoulli) outcome, so that it makes sense to use use logistic regression on the data in `d_tidy`.
+
+```{r, results = "hide"}
+fit_accuracy <- brms::brm(
+  formula = correct_response ~ Cond,
+  data = d_tidy %>% 
+    filter(trial_type %in% c("category_A", "category_B")) %>%  
+    mutate(correct_response = response == expected_response),
+  family = bernoulli(link = "logit"),
+  prior = prior(student_t(1, 0, 100), coef = CondVB),
+  sample_prior = 'yes'
+)
+```
+
+```{r}
+brms::hypothesis(fit_accuracy, "CondVB > 0")
+```
+
+> The evidence ratio in favor of this hypothesis is very, very high. We therefore find very strong evidence in favor of the "Accuracy" hypothesis: it really appears to be easier to learn a category distinction for the "easily verbalizable" case.
+
+## Ex 4.c Testing the "Strategy" hypothesis [8 points]
+
+<!-- 2 points for analyzing the data as Bernoulli data -->
+<!-- 4 points for setting up the correct test -->
+<!-- 2 points for correct interpretation of results -->
+
+Test the "Strategy" hypothesis in the way that you think is best appropriate (but using a method that we have covered in class).
+
+**Solution:**
+
+We use logistic regression again:
+
+```{r, results = "hide"}
+fit_strategy <- brms::brm(
+  formula = correct_response ~ Cond,
+  data = d_tidy %>% 
+    filter(!(trial_type %in% c("category_A", "category_B"))) %>%  
+    mutate(correct_response = response == expected_response),
+  family = bernoulli(link = "logit"),
+  prior = prior(student_t(1, 0, 100), coef = CondVB),
+  sample_prior = 'yes'
+)
+```
+
+```{r}
+brms::hypothesis(fit_strategy, "CondVB > 0")
+```
+
+> Judging from the estimated evidence ratio, there is overwhelming evidence in factor of the "Strategy" hypothesis that the number of categorization choices seemingly based on features is higher for the "easily verbalizable" group.
+
+# <span style = "color:firebrick">Exercise 5 (challenge question):</span> Comparison to ANOVA analysis [5 points]
+
+<!-- 0 points for describing the main effect of strategy -->
+<!-- 3 points for setting up the correct analysis -->
+<!-- 2 points for correct interpretation -->
+
+B&M's ANOVA-based analysis for the "Strategy" Hypothesis actually also tested a fourth hypothesis, for which a significant test result was obtained.
+Describe in words what that finding was.
+Use conjugacy (starting from flat priors) to quickly sample from a Bayesian posterior to test this additional hypothesis using Kruschke's ternary logic for hypothesis testing.
+(**Hint:** Did you really think you could take this final w/o addressing an issue translatable into a question about whether some stupid coin is fair or biased on some way or other?)
+
+**Solution:**
+
+The reported main effect of category amounts to saying that participants seem to have favored choices indicative of a "characterizing attribute" (CA) strategy. 
+
+**Solution:**
+
+We can test this with a simple Binomial model.
+Here's the relevant number of counts:
+
+```{r}
+d_tidy %>% 
+  filter(!(trial_type %in% c("category_A", "category_B"))) %>%  
+  mutate(correct_response = response == expected_response) %>% 
+  count(correct_response)
+```
+
+```{r}
+# samples from the posterior 
+n_samples = 10000
+post_samples <- rbeta(n_samples, shape1 = 456 + 1, 224 + 1 )
+aida::summarize_sample_vector(post_samples)
+```
+
+> The 95% credible interval is fully contained in the range $\theta_c > 0.5$, which, following Kruschke's ternary approach, lends support to the idea that the prevalent categorication stratety was indeed CA.

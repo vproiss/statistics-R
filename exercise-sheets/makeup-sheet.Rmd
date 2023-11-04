@@ -1,0 +1,216 @@
+---
+title: "IDA Exercise Sheet 5 (Make-up sheet)"
+date: 'Due: February 2, 2023 by 23:59 CET'
+author: ""
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    highlight: tango
+---
+
+```{r setup, include=FALSE}
+
+knitr::opts_chunk$set(echo = TRUE, error = F, message = F, warning = F)
+
+```
+
+```{r libraries, include=FALSE, message=FALSE, warning=FALSE}
+
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library(tidyverse)
+
+# use the minimal theme for plotting
+ggplot2::theme_set(ggplot2::theme_minimal())
+
+# global color scheme / non-optimized
+project_colors = c("#E69F00", "#56B4E9", "#009E73", "#F0E442", "#0072B2", "#D55E00", "#CC79A7", "#000000")
+
+# setting theme colors globally
+scale_colour_discrete <- function(...) {
+  scale_colour_manual(..., values = project_colors)
+}
+scale_fill_discrete <- function(...) {
+   scale_fill_manual(..., values = project_colors)
+} 
+
+# nicer global knitr options
+knitr::opts_chunk$set(warning = FALSE, message = FALSE, 
+                      cache = FALSE, fig.align = 'center')
+
+
+```
+
+# Instructions
+
+* Create an Rmd file with your name in the 'author' heading and answer the following questions.
+* When all answers are ready, 'Knit' the document to produce a HTML file.
+* Create a ZIP archive called "IDA_HW05-name.zip" (where %name% is your last name as written in the 'author' field) containing:
+   * an R Markdown file "IDA_HW05-name.Rmd"
+   * a knitted HTML document "IDA_HW05-name.html"
+   * any other files necessary to compile your Rmarkdown to HTML (data, pictures etc.)
+* Upload the ZIP archive on Stud.IP in your group's folder before the deadline (see above). You may upload as many times as you like before the deadline, only your final submission will count.
+
+# <span style = "color:firebrick">Exercise 1: R Basics</span>  [5 points]
+
+## Ex 1.a Working with strings [2 points]
+
+Load the dataset from the second experiment from [Lazaridou-Chatzigoga et al.'s]( https://doi.org/10.3389/fpsyg.2019.01971) study into R by running the code chunk below.
+
+```{r}
+frontiers <- read_csv("Frontiers 2019 adultchild exp 2.csv")
+```
+
+The column `statement` contains experimental items used in this study, i.e., statements about made-up creatures and their properties like the following:
+
+> `r frontiers$statement[1]`
+
+Use functions from the `stringr` package to create a list containing all unique creatures mentioned in the dataset. How many unique creatures are there?
+
+**Solution:** 
+
+```{r}
+stringi::stri_extract_first(frontiers$statement, regex="^[A-Za-z]+") |>
+  unique()
+```
+> There are `r stringi::stri_extract_first(frontiers$statement, regex="^[A-Za-z]+") |> unique() |> length()` unique creatures in the dataset.
+
+## Ex 1.b Writing functions [3 points]
+
+Write a named function `create_statement` that takes as arguments character strings `creature_name` and `property _type` ("neutral" or "striking"; your function should check whether valid property type is given), and returns a statement about the creature (also as a character string) like the ones used in Lazaridou-Chatzigoga et al.'s experiment, e.g. "Ackles love to play with toys."
+
+```{r, eval = FALSE}
+create_statement <- …
+```
+
+**Solution:**
+
+```{r}
+create_statement <- function(creature_name, property) {
+  if (!property %in% c("neutral", "striking")) {
+    stop("Property type should be either 'neutral' or 'striking.'")
+  }
+  
+  neutral_statements = c("like to play with toys.",
+                         "like to make new games.",
+                         "love to run through parks.")
+  striking_statements = c("like to play with fire.",
+                          "like to cheat at games.",
+                          "love to make people angry.")
+  
+  if (property == "neutral") {
+    statement = paste(creature_name, sample(neutral_statements, 1))
+  }
+  if (property == "striking") {
+    statement = paste(creature_name, sample(striking_statements, 1))
+  }
+  return(statement)
+}
+
+create_statement("Ackles", "striking")
+```
+
+
+# <span style = "color:firebrick">Exercise 2: Data wrangling and visualisation</span>  [5 points]
+
+## Ex 2.a Plotting distributions [5 points]
+
+The `penguins` dataset from the `palmerpenguins` library contains measurements of penguins who live on three islands in the Palmer Archipelago, Antarctica. Combine `geom_density` and `geom_rug` to plot the distribution of `bill_length` to `bill_depth` ratio for the three penguin species in the `penguins` dataset. (The resulting plot should look similar to [this one in the web book.](https://michael-franke.github.io/intro-data-analysis/Chap-02-04-geoms.html#rugs)) Use three distinct colours for the three penguin species.
+
+**Hint:** Before you plot the data, make sure to get rid of `NA`s if there are any in the relevant columns of the dataframe.
+
+```{r}
+library(palmerpenguins)
+glimpse(penguins)
+```
+
+**Solution:**
+
+```{r}
+palmerpenguins::penguins |> 
+  filter(!is.na(bill_length_mm & !is.na(bill_depth_mm))) |> 
+  ggplot(aes(x       = bill_length_mm / bill_depth_mm,
+             colour  = species,
+             fill    = species)) +
+  geom_density(alpha = .5) +
+  geom_rug() +
+  labs(x      = "Bill dimension",
+       y      = "Density",
+       colour = "Species",
+       fill   = "Species")
+  
+```
+
+# <span style = "color:firebrick">Exercise 3: Hypothesis testing</span>  [10 points]
+
+## Ex 3.a Comparing two means [5 points]
+
+The file `plants_animals.csv` contains frequency measures and lexical characteristics of 81 common English words that denote different species of plants and animals. Load the file into R by running the code chunk below:
+
+```{r}
+plants_animals <- read_csv("plants_animals.csv")
+glimpse(plants_animals)
+```
+
+We want to know whether words that denote animals are as frequent in the English language as words that denote plants. To answer this question, we will use the `plants_animals` data. The normalised frequency of each word is stored in the column `frequency`. The column `class` can tell us whether the word denotes a plant or an animal. Write down a formal hypothesis, and select and then run an appropriate statistical test (e.g. a one-sample $t$-test, or a two-sample $t$-test, … etc.).
+
+**Solution:**
+
+```{r}
+plants <- plants_animals |> filter(class == "plant")
+animals <- plants_animals |> filter(class == "animal")
+t.test(animals$frequency, plants$frequency)
+```
+
+## Ex 3.b Interpreting results of statistical tests [5 points]
+
+Interpret the results of the test you ran in 3a.
+
+**Solution:**
+
+> From the R output, we can see that the confidence interval around the difference in means does not include zero. The p-value is less than 0.05. Thus, we can reject the null hypothesis that the difference in mean frequencies between the two word classes is zero.
+
+# <span style = "color:firebrick">Exercise 4: Regression modelling</span>  [10 points]
+
+## Ex 4.a Analysing songs' popularity on Spotify [10 points]
+
+The `songs.csv` file contains a subset of [the TidyTuesday Spotify dataset](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-09-14). There are nine variables that describe 5,000 songs available on Spotify:
+
+|variable                  |class     |description |
+|--------|---------|-----------|
+|song_id |character | Song ID |
+|performer |character | Performer name  |
+|song  |character | Song|
+|spotify_genre |character | Genre|
+|danceability |double    | Danceability describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. A value of 0.0 is least danceable and 1.0 is most danceable. |
+|loudness   |double    | The overall loudness of a track in decibels (dB). Loudness values are averaged across the entire track and are useful for comparing relative loudness of tracks. Loudness is the quality of a sound that is the primary psychological correlate of physical strength (amplitude). Values typical range between -60 and 0 db.|
+|speechiness  |double    | Speechiness detects the presence of spoken words in a track. The more exclusively speech-like the recording (e.g. talk show, audio book, poetry), the closer to 1.0 the attribute value. Values above 0.66 describe tracks that are probably made entirely of spoken words. Values between 0.33 and 0.66 describe tracks that may contain both music and speech, either in sections or layered, including such cases as rap music. Values below 0.33 most likely represent music and other non-speech-like tracks. |
+|valence |double    | A measure from 0.0 to 1.0 describing the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). |
+|spotify_track_popularity  |double    | Popularity |
+
+You can load the dataset into R by running the code chunk below:
+
+```{r}
+songs <- read_csv("songs.csv")
+glimpse(songs)
+```
+
+We are interested in predicting songs' popularity (the popularity measure is stored in the column `spotify_track_popularity`) by using continuous predictors `danceability`, `loudness`, `speechiness`, and `valence`.
+
+Fit a linear regression model to the Spotify data, and interpret the output of `summary(model)`.
+
+```{r}
+model <- lm(spotify_track_popularity ~ danceability + loudness + speechiness + valence,
+            data = songs)
+summary(model)
+```
+
+> The linear regression model explains a little over 18% of variance in the data. All predictors are shown to be significant. As values of danceability, loudness, and speechiness increase, popularity is shown to increase as well. As valence increases, songs lose in popularity.
+
+**References**
+
+Lazaridou-Chatzigoga, D., Katsos, N. and Stockall, L. (2019). Generalizing About Striking Properties: Do Glippets Love to Play With Fire? Front. Psychol. 10:1971. doi: 10.3389/fpsyg.2019.01971
+
+Thomas Mock (2022). Tidy Tuesday: A weekly data project aimed at the R ecosystem. https://github.com/rfordatascience/tidytuesday.
+
+The `plants_animals` dataset was adapted from the `languageR` package.

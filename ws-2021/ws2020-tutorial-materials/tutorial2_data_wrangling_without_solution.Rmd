@@ -1,0 +1,144 @@
+---
+title: "Tutorial 2 Data Wrangling"
+author: "Inga & Lune"
+date: "4 11 2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+# package for convenience functions (e.g. ggplot2, dplyr, etc.)
+library("tidyverse")
+
+# remotes::install_github("rstudio/EDAWR")
+library(EDAWR)
+```
+
+# Motivation
+
+For data scientists, wrangling / manipulating / transforming data is 50 - 80% of time spent -- so we should learn to do this efficiently!
+
+
+Tidy data can make our lives easier. What are the 3 properties of tidy data? 
+
+
+### Data wrangling/transformation cheatsheets
+
+https://rstudio.com/wp-content/uploads/2015/02/data-wrangling-cheatsheet.pdf
+
+https://raw.githubusercontent.com/rstudio/cheatsheets/master/data-transformation.pdf
+
+### Basic R cheatsheet
+
+https://raw.githubusercontent.com/rstudio/cheatsheets/master/base-r.pdf
+
+
+
+# Task 1
+
+Experimental Data:
+
+```{r}
+
+data <- 
+
+  tibble(subject_id = rep(c('1', '2', '3'), times = 2),
+         Hunger    = rep(c('hungry', 'not_hungry'), each = 3),
+         RT = c(100, 300, 120, 110, 90, 100))
+data
+
+```
+
+a. Is this a within-subject or between-subject design? 
+
+
+b. Is this a repeated measure design? 
+
+
+
+c. Is this experiment a one-factor or a full factorial design? What is/are the factor(s)? How many levels does each factor have?
+
+
+d. What is the dependent and what is the independent variable?
+
+
+
+# Task 2
+
+Data Wrangling
+
+When looking at this data set, you would like to get the mean RT of each subject. 
+You would like to have a tibble with the subject_id and the corresponding mean RT. 
+
+
+<!-- #region -->
+
+# Now let's look at some datasets which are part of the EDAWR library. 
+
+
+## First take a look at the storms data
+<!-- #endregion -->
+
+```{r}
+storms
+```
+
+### Split the date column into day, month, and year columns 
+
+
+### Then, filter out storms which were below 50 in wind speed, and remove the d column. 
+
+
+## Now let's look at the pollution data
+
+```{r}
+pollution
+```
+
+### Make new columns using the values from size. It should have city, large, and small columns. Save it as pollution_wider
+
+
+### Now reverse the operation using pollution_wider. The result should look like the original dataframe.
+
+
+### Add the city number information to the last column of the pollution table, and sort by amount
+
+Paste the tribble below. Hint: the str_to_title() function might help before joining 
+
+
+```{r}
+city_number  <- tribble(
+~city, ~num,
+"new york", 1,
+"london", 2,
+"beijing", 3)
+
+city_number
+```
+
+
+
+### Group by size and show the average amount for ea. size in a column called mean
+
+## Now let's look at the tuberculosis data from a WHO Global Tuberculosis Report, called tb. 
+
+```{r}
+head(tb)
+```
+
+### How many countries are there? 
+
+
+
+### Now add an extra column called code, which contains the first 3 letters of the country. Move code column next to country column. 
+
+
+
+# That's all we have for you today! Any questions? 
+
+
+
+
